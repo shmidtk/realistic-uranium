@@ -3,14 +3,12 @@ data:extend(
   { -- Mining resources
     type = "item",
     name = "uranium-powder",
-    icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-icon.png",
-    icon_size = 32,
+    icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-64.png",
+    icon_size = 64,
     subgroup = "intermediate-product",
     order = "g[uranium-powder]",
     stack_size = 100
   },
-  
-
 
 
 

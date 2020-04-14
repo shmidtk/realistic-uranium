@@ -7,6 +7,7 @@ require("prototypes.entity")
 
 -- My uranium adds
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "uranium-powder"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "uranium-slurry-preparation"})
 
 
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "empty-fuel-cell"})

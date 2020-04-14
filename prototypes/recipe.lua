@@ -1,6 +1,6 @@
 data:extend(
-{
-    {  --URANIUM PROCESSING
+{--URANIUM PROCESSING
+    {  --URANIUM POWDER
         type = "recipe",
         name = "uranium-powder",
         category = "centrifuging",
@@ -11,12 +11,32 @@ data:extend(
         },
         result = "uranium-powder",
         result_count = 10,
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-icon.png",
-        icon_size = 32,
+        icon = "__NuclearShmidtk__/graphics/icons/uranium-powder-64.png",
+        icon_size = 64,
         subgroup = "intermediate-product",
         order = "f[uranium-powder]"
     },
-    
+    {  --URANIUM SLURRY
+        type = "recipe",
+        name = "uranium-slurry-preparation",
+        category = "chemistry",
+        energy_required = 12, --fix
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "uranium-powder", amount = 25},
+                        {type="fluid", name = "water",          amount = 75},
+                      },
+        results = {
+                    {type="fluid", name="uranium-slurry", amount=100},
+                  },
+        main_product= "",
+        icon_mipmaps = 4,
+        icon = "__NuclearShmidtk__/graphics/icons/uranium-slurry.png",
+        icon_size = 32,
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[uranium-slurry]"
+    },
+
     
     {
         type = "recipe",
