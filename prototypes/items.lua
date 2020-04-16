@@ -1,21 +1,5 @@
 data:extend(
 {
-  { -- Mining resources
-    type = "item",
-    name = "uranium-powder",
-    icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-64.png",
-    icon_size = 64,
-    subgroup = "intermediate-product",
-    order = "g[uranium-powder]",
-    stack_size = 100
-  },
-
-
-
-
-
-
-
   { -- VERY HIGH TEMPERATURE NUCLEAR REACTOR
     type = "item",
     name = "vht-nuclear-reactor",
