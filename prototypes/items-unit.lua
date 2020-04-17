@@ -23,9 +23,9 @@
         
 
   local dtk_uranium_powder_recipe = table.deepcopy(assembler_recipe)
-        dtk_uranium_powder_recipe.name = "dtk-uranium-powder"
+        dtk_uranium_powder_recipe.name = "dtk-uranium-powder-proc"
         dtk_uranium_powder_recipe.energy_required = 12
-        dtk_uranium_powder_recipe.enabled = true
+        dtk_uranium_powder_recipe.enabled = false
         dtk_uranium_powder_recipe.ingredients = {
                                                         {type = "item", name = "uranium-ore", amount = 10}
                                                 }

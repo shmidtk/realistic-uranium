@@ -7,10 +7,18 @@ require("prototypes.fluid-unit")
 require("prototypes.resources")
 require("prototypes.entity")
 
+--Pair of commands to force recipe updates
+--/c game.player.force.technologies['uranium-processing'].researched=true
+--/c game.player.force.technologies['uranium-processing'].researched=false
+
 -- My uranium adds
-table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-powder"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-powder-proc"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-slurry-preparation"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-slurry-acidification"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-salt-extraction"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-dirty-water-treatment"})
+
+
 
 
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "empty-fuel-cell"})

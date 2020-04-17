@@ -22,6 +22,45 @@ data:extend(
  --       order = "a[fluid-chemistry]-f[uranium-slurry]"
  --   },
 
+    {  --URANIUM SALT SOLUTION EXTRACTION
+    type = "recipe",
+    name = "dtk-uranium-salt-extraction",
+    category = "chemistry",
+    energy_required = 12,
+    enabled = false,
+    ingredients = {
+                    {type="fluid",  name = "dtk-uranium-acid-solution", amount = 4000}
+                },
+    results = {
+                    {type="fluid", name="dtk-uranium-salt-solution", amount=24},
+                    {type="fluid", name="dtk-stone-slurry", amount= 3985},
+                    {type="fluid", name="dtk-hydrogen", amount= 14}
+ 
+                },
+    icon = "__NuclearShmidtk__/graphics/resources/uranium-acid-solution.png",
+    icon_size = 64,
+    subgroup = "fluid-recipes",
+    order = "a[fluid-chemistry]-f[uranium-slurry]"
+    },
+
+    {  --DIRTY WATER CLARIFICATION
+    type = "recipe",
+    name = "dtk-dirty-water-treatment",
+    category = "chemistry",
+    energy_required = 12,
+    enabled = false,
+    ingredients = {
+                    {type="fluid",  name = "dtk-stone-slurry", amount = 100}
+                },
+    results = {
+                    {type="fluid", name="water", amount=75},
+                    {type="item", name="stone", amount= 24.97} 
+                },
+    icon = "__NuclearShmidtk__/graphics/recipes/water-treatment.png",
+    icon_size = 64,
+    subgroup = "fluid-recipes",
+    order = "a[fluid-chemistry]-f[dirty-water-treatment]"
+    },
     
     {
         type = "recipe",

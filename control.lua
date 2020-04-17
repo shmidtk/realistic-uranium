@@ -1,0 +1,5 @@
+--script.on_configuration_changed(function(event) 
+ --   for _, force in pairs(game.forces) do
+--    force.reset_recipies()
+--    end
+--    end)
