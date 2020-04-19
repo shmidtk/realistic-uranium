@@ -1,5 +1,17 @@
 data:extend(
 {
+
+
+  
+    { -- FLUORITE
+    type = "item",
+    name = "fluorite",
+    icon = "__NuclearShmidtk__/graphics/icons/fluorite-orig.png",
+    icon_size = 64,
+    subgroup = "intermediate-product",
+    order = "h[fluorite]",
+    stack_size = 100
+    },
   { -- VERY HIGH TEMPERATURE NUCLEAR REACTOR
     type = "item",
     name = "vht-nuclear-reactor",
@@ -49,15 +61,7 @@ data:extend(
     order = "h[nuclear-waste]",
     stack_size = 5
   },
-  { -- FLUORITE
-    type = "item",
-    name = "fluorite",
-    icon = "__NuclearShmidtk__/graphics/icons/fluorite.png",
-    icon_size = 64,
-    subgroup = "intermediate-product",
-    order = "h[fluorite]",
-    stack_size = 100
-  },
+
   { -- RADIUM-226
     type = "item",
     name = "radium-226",

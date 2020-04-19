@@ -28,7 +28,7 @@ local dtk_stone_slurry = table.deepcopy(standard_fluid)
 dtk_stone_slurry.name = 'dtk-stone-slurry'
 dtk_stone_slurry.base_color = {145, 110, 39}
 dtk_stone_slurry.flow_color = {145, 110, 39}
-dtk_stone_slurry.icon = "__NuclearShmidtk__/graphics/resources/dirty-water.png"
+dtk_stone_slurry.icon = "__NuclearShmidtk__/graphics/resources/dirty-water-2.png"
 dtk_stone_slurry.icon_size = 64
 dtk_stone_slurry.order = "a[fluid]-b[dirty_water]"
 
@@ -41,19 +41,31 @@ dtk_uranium_salt_solution.icon = "__NuclearShmidtk__/graphics/resources/uranium-
 dtk_uranium_salt_solution.icon_size = 64
 dtk_uranium_salt_solution.order = "a[fluid]-b[uranium-salt-solution]"
 
+--sulfuric-acid-from-trioxide
+local dtk_sulfuric_acid_from_trioxide = table.deepcopy(data.raw.recipe["sulfuric-acid"])
+        dtk_sulfuric_acid_from_trioxide.name = 'dtk-sulfuric-acid-from-trioxide'
+        dtk_sulfuric_acid_from_trioxide.ingredients = 
+                                                        {
+                                                            {type="fluid", name="dtk-sulfur-trioxide", amount=100},
+                                                            {type="fluid", name="water", amount=100},
+                                                        }
+        dtk_sulfuric_acid_from_trioxide.subgroup = "fluid-recipes"
+        dtk_sulfuric_acid_from_trioxide.order = "a[fluid-chemistry]-f[sulfuric-acid-from-trioxide]"
+
 
 -- HYDROGEN
-local dtk_hydrogen = table.deepcopy(standard_fluid)
-dtk_hydrogen.name = 'dtk-hydrogen'
-dtk_hydrogen.base_color = {255, 255, 255}
-dtk_hydrogen.flow_color = {255, 255, 255}
-dtk_hydrogen.icon = "__NuclearShmidtk__/graphics/resources/hydrogen.png"
-dtk_hydrogen.icon_size = 64
-dtk_hydrogen.order = "a[fluid]-b[hydrogen]"
+--local dtk_hydrogen = table.deepcopy(standard_fluid)
+--dtk_hydrogen.name = 'dtk-hydrogen'
+--dtk_hydrogen.base_color = {255, 255, 255}
+--dtk_hydrogen.flow_color = {255, 255, 255}
+--dtk_hydrogen.icon = "__NuclearShmidtk__/graphics/resources/hydrogen.png"
+--dtk_hydrogen.icon_size = 64
+--dtk_hydrogen.order = "a[fluid]-b[hydrogen]"
 
 
 data:extend(
     {	
+        dtk_sulfuric_acid_from_trioxide,
         dtk_uranium_slurry,
         {  --URANIUM SLURRY RECIPE
             type = "recipe",
@@ -97,8 +109,122 @@ data:extend(
 
         dtk_stone_slurry,
         dtk_uranium_salt_solution,
-        dtk_hydrogen
+        
+        { -- OK LIQUOIR
+            type = "fluid",
+            name = "dtk-ok-liquoir",
+            default_temperature = 25,
+            heat_capacity = "1KJ",
+            base_color = {r=0.0, g=0.0, b=0.0},
+            flow_color = {r=0.0, g=0.0, b=0.0},
+            max_temperature = 100,
+            icon = "__NuclearShmidtk__/graphics/resources/ok-liquoir.png",
+            icon_size = 64,
+            pressure_to_speed_ratio = 0.4,
+            flow_to_energy_ratio = 0.59,
+            order = "a[fluid]-b[ok-liquoir]"
+        },
+
+        {  -- YELLOW CAKE PROCESSING INTO OK LIQUOIR
+        type = "recipe",
+        name = "dtk-ok-liquoir-recipe",
+        category = "uranium-processing",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item", name = "dtk-yellow-cake-drum", amount = 1},
+                        {type="fluid", name = "nitric-acid",          amount = 4000},
+                        {type="fluid", name = "water",          amount = 22500}
+                    },
+        results = {
+                        {type="fluid", name="dtk-ok-liquoir", amount= 30000},
+                        {type="item", name="empty-barrel", amount= 1}
+                  },
+        icon = "__NuclearShmidtk__/graphics/resources/ok-liquoir.png",
+        icon_size = 64,
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[ok-liquoir]"
+        },
 
 
+        { --fluorhydric-acid
+            type = "fluid",
+            name = "dtk-fluorhydric-acid",
+            default_temperature = 25,
+            heat_capacity = "1KJ",
+            base_color = {r=0.52, g=0.78, b=0.06},
+            flow_color = {r=0.52, g=0.78, b=0.06},
+            max_temperature = 100,
+            icon = "__NuclearShmidtk__/graphics/icons/fluorhydric-acid.png",
+            icon_size = 64,
+            pressure_to_speed_ratio = 0.4,
+            flow_to_energy_ratio = 0.59,
+            order = "a[fluid]-b[fluorhydric-acid]"
+        },
+        { --fluorhydric-acid Production
+            type = "recipe",
+            name = "dtk-fluorhydric-acid",
+            icon = "__NuclearShmidtk__/graphics/icons/fluorhydric-acid.png",
+            icon_size = 64,
+            category = "chemistry",
+            enabled = false,
+            energy_required = 6,
+            ingredients = 
+            {
+                {type="item", name="dtk-fluorite", amount=1},
+                {type="fluid", name="sulfuric-acid", amount=100},
+            },
+            results = 
+            {
+                {type="fluid", name="dtk-fluorhydric-acid", amount=100},
+                {type="item", name='dtk-calcium-sulfate', amount=1}
+            },
+            subgroup = "fluid-recipes",
+            order = "a[fluid-chemistry]-f[fluorhydric-acid]"
+        },
+
+        { --Sulfur-trioxide
+            type = "fluid",
+            name = "dtk-sulfur-trioxide",
+            default_temperature = 25,
+            heat_capacity = "1KJ",
+            base_color = {r=0.255, g=0.255, b=0.00},
+            flow_color = {r=0.255, g=0.255, b=0.00},
+            max_temperature = 100,
+            icon = "__NuclearShmidtk__/graphics/resources/sulfur-trioxide.png",
+            icon_size = 64,
+            pressure_to_speed_ratio = 0.4,
+            flow_to_energy_ratio = 0.59,
+            order = "a[fluid]-b[fluorhydric-acid]"
+        },
+        
+        { -- PROCESSING OF CALCUIM SULFAT TO RECOVER SULUR TRIOXIDE
+        type = "recipe",
+        name = "dtk-sulfur-trioxide-recipe",
+        icon = "__NuclearShmidtk__/graphics/resources/sulfur-trioxide.png",
+        icon_size = 64,
+        category = "chemistry",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+        {
+            {type="item", name="dtk-calcium-sulfate", amount=1},
+            {type="item", name="stone", amount=1},
+        },
+        results = 
+        {
+            {type="fluid", name="dtk-sulfur-trioxide", amount=100},
+            {type="item", name='dtk-calcium-silicat', amount=1}
+        },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[fluorhydric-acid]",
+        crafting_machine_tint =
+        {
+            primary = {r = 0.10, g = 0.90, b = 0.10},
+            secondary = {r = 0.10, g = 0.90, b = 0.10},
+            tertiary = {r = 0.50, g = 0,51, b = 0.51},
+        }
+    },
     }
 )
+

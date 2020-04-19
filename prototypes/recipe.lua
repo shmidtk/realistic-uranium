@@ -1,3 +1,13 @@
+
+
+
+local dtk_uranium_plant_recipe =  table.deepcopy(data.raw["recipe"]["oil-refinery"])
+dtk_uranium_plant_recipe.name = 'dtk-uranium-plant-recipe'
+dtk_uranium_plant_recipe.enabled = false
+dtk_uranium_plant_recipe.result = 'dtk-uranium-refinery-plant'
+dtk_uranium_plant_recipe.result_count = 1
+
+
 data:extend(
 {--URANIUM PROCESSING
 
@@ -21,11 +31,11 @@ data:extend(
  --       subgroup = "fluid-recipes",
  --       order = "a[fluid-chemistry]-f[uranium-slurry]"
  --   },
-
+    dtk_uranium_plant_recipe,
     {  --URANIUM SALT SOLUTION EXTRACTION
     type = "recipe",
     name = "dtk-uranium-salt-extraction",
-    category = "chemistry",
+    category = "uranium-processing",
     energy_required = 12,
     enabled = false,
     ingredients = {
@@ -34,7 +44,8 @@ data:extend(
     results = {
                     {type="fluid", name="dtk-uranium-salt-solution", amount=24},
                     {type="fluid", name="dtk-stone-slurry", amount= 3985},
-                    {type="fluid", name="dtk-hydrogen", amount= 14}
+                --    {type="fluid", name="dtk-hydrogen", amount= 14}
+                   {type="fluid", name="hydrogen", amount= 14}  --Krastorio Hydrogen
  
                 },
     icon = "__NuclearShmidtk__/graphics/resources/uranium-acid-solution.png",
@@ -46,15 +57,15 @@ data:extend(
     {  --DIRTY WATER CLARIFICATION
     type = "recipe",
     name = "dtk-dirty-water-treatment",
-    category = "chemistry",
+    category = "uranium-processing",
     energy_required = 12,
     enabled = false,
     ingredients = {
                     {type="fluid",  name = "dtk-stone-slurry", amount = 100}
                 },
     results = {
-                    {type="fluid", name="water", amount=75},
-                    {type="item", name="stone", amount= 24.97} 
+                    {type="fluid", name="water", amount = 75},
+                    {type="item", name="stone", amount= 24} 
                 },
     icon = "__NuclearShmidtk__/graphics/recipes/water-treatment.png",
     icon_size = 64,
@@ -622,33 +633,7 @@ data:extend(
             tertiary = {r = 0.50, g = 0,51, b = 0.51},
         }
     },
-    {
-        type = "recipe",
-        name = "fluorhydric-acid",
-        icon = "__NuclearShmidtk__/graphics/icons/fluorhydric-acid.png",
-        icon_size = 64,
-        category = "chemistry",
-        enabled = false,
-        energy_required = 6,
-        ingredients = 
-        {
-            {type="item", name="fluorite", amount=1},
-            {type="fluid", name="sulfuric-acid", amount=15},
-            {type="fluid", name="water", amount=80},
-        },
-        results = 
-        {
-            {type="fluid", name="fluorhydric-acid", amount=30},
-        },
-        subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[fluorhydric-acid]",
-        crafting_machine_tint =
-        {
-            primary = {r = 0.10, g = 0.90, b = 0.10},
-            secondary = {r = 0.10, g = 0.90, b = 0.10},
-            tertiary = {r = 0.50, g = 0,51, b = 0.51},
-        }
-    },
+
     {
     type = "recipe",
     name = "burial-uranium-hexafluoride",

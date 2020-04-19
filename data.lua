@@ -7,6 +7,8 @@ require("prototypes.fluid-unit")
 require("prototypes.resources")
 require("prototypes.entity")
 
+
+
 --Pair of commands to force recipe updates
 --/c game.player.force.technologies['uranium-processing'].researched=true
 --/c game.player.force.technologies['uranium-processing'].researched=false
@@ -17,8 +19,18 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-slurry-acidification"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-salt-extraction"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-dirty-water-treatment"})
-
-
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-plant-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-salt-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-yellow-cake"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-yellow-cake-drumming"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-ok-liquoir-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-unh-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-unh-backing-to-uo3"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-fluorhydric-acid"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-sulfur-trioxide-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-sulfuric-acid-from-trioxide"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uo2-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-calcium-silicat-to-bricks"})
 
 
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "empty-fuel-cell"})
@@ -47,7 +59,11 @@ data:extend({
     {
         type = "recipe-category",
         name = "nwaste"
-    }
+	},
+	{
+		type = "recipe-category",
+		name = "uranium-processing"
+	},
 })
 
 -- CHANGING RECIPES
