@@ -124,33 +124,33 @@
         order = "a[fluid-chemistry]-f[dtk-yellow-cake]"
         },
 
-        { --  Yellow cake drum
-        type = "item",
-        name = "dtk-yellow-cake-drum",
-        icon = "__NuclearShmidtk__/graphics/resources/yellow-cake-drum.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "f[dtk-yellow-cake-drum]",
-        stack_size = 10
-       },
+--        { --  Yellow cake drum
+--       type = "item",
+--        name = "dtk-yellow-cake-drum",
+--        icon = "__NuclearShmidtk__/graphics/resources/yellow-cake-drum.png",
+--        icon_size = 64,
+--        subgroup = "intermediate-product",
+--        order = "f[dtk-yellow-cake-drum]",
+--        stack_size = 10
+--       },
 
-        {  --Yellow cake drumming
-        type = "recipe",
-        name = "dtk-yellow-cake-drumming",
-        energy_required = 12,
-        enabled = false,
-        ingredients = {
-                        {type="item",  name = "dtk-yellow-cake", amount = 25},
-                        {type="item",  name = "empty-barrel", amount = 1},
-                    },
-        results = {
-                        {type="item", name="dtk-yellow-cake-drum", amount=1},
-                      
-                    },
-        icon = "__NuclearShmidtk__/graphics/resources/yellow-cake-drum.png",
-        icon_size = 64,
-        order = "f[yellow-cake-drum]"
-        },
+--        {  --Yellow cake drumming
+--        type = "recipe",
+--        name = "dtk-yellow-cake-drumming",
+--        energy_required = 12,
+--        enabled = false,
+--        ingredients = {
+--                        {type="item",  name = "dtk-yellow-cake", amount = 25},
+--                        {type="item",  name = "empty-barrel", amount = 1},
+--                    },
+--        results = {
+--                        {type="item", name="dtk-yellow-cake-drum", amount=1},
+--                      
+--                    },
+--        icon = "__NuclearShmidtk__/graphics/resources/yellow-cake-drum.png",
+--        icon_size = 64,
+--        order = "f[yellow-cake-drum]"
+--        },
         
         { -- UNH
         type = "item",
@@ -274,7 +274,36 @@
         stack_size = 100
         },
 
+        { -- Uranium Tetrafluorite UF4
+        type = "item",
+        name = "dtk-uranium-tetrafluorite",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-tetrafluorite.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[uranium-tetrafluorite]",
+        stack_size = 100
+        },
 
+
+        {  -- Prodcution of UF4 (Uranium Tetrafluorite)
+        type = "recipe",
+        name = "dtk-uo2-recipe",
+        category = "chemistry",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "dtk-uo2", amount = 1},
+                        {type="fluid",  name = "dtk-fluorhydric-acid", amount = 400},
+                    },
+        results = {
+                        {type="item", name="dtk-uranium-tetrafluorite", amount=1},
+                        {type="fluid", name="steam", amount=500, temperature = 150},                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/recipes/uo3-recipe.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[uo3-recipe]"
+        },
 
 
     }

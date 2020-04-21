@@ -605,34 +605,7 @@ data:extend(
         },
         allow_decomposition = false
     },
-    {
-        type = "recipe",
-        name = "fluorite",
-        icon = "__NuclearShmidtk__/graphics/icons/fluorite.png",
-        icon_size = 64,
-        category = "chemistry",
-        enabled = false,
-        energy_required = 6,
-        ingredients = 
-        {
-            {type="item", name="uranium-ore", amount=8},
-            {type="item", name="stone", amount=10},
-            {type="fluid", name="sulfuric-acid", amount=25},
-        },
-        results = 
-        {
-            {type="fluid", name="uranium-hexafluoride", amount=4},
-            {type="item", name="fluorite", amount=2},
-        },
-        subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[fluorite]",
-        crafting_machine_tint =
-        {
-            primary = {r = 0.10, g = 0.80, b = 0.10},
-            secondary = {r = 0.10, g = 0.80, b = 0.10},
-            tertiary = {r = 0.50, g = 0,51, b = 0.51},
-        }
-    },
+  
 
     {
     type = "recipe",

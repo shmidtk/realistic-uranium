@@ -132,13 +132,12 @@ data:extend(
         energy_required = 12,
         enabled = false,
         ingredients = {
-                        {type="item", name = "dtk-yellow-cake-drum", amount = 1},
-                        {type="fluid", name = "nitric-acid",          amount = 4000},
-                        {type="fluid", name = "water",          amount = 22500}
+                        {type="item", name = "dtk-yellow-cake", amount = 1},
+                        {type="fluid", name = "nitric-acid",          amount = 200},
+                        {type="fluid", name = "water",          amount = 900}
                     },
         results = {
-                        {type="fluid", name="dtk-ok-liquoir", amount= 30000},
-                        {type="item", name="empty-barrel", amount= 1}
+                        {type="fluid", name="dtk-ok-liquoir", amount= 1200}
                   },
         icon = "__NuclearShmidtk__/graphics/resources/ok-liquoir.png",
         icon_size = 64,
@@ -207,24 +206,26 @@ data:extend(
         enabled = false,
         energy_required = 6,
         ingredients = 
-        {
-            {type="item", name="dtk-calcium-sulfate", amount=1},
-            {type="item", name="stone", amount=1},
-        },
+            {
+                {type="item", name="dtk-calcium-sulfate", amount=1},
+                {type="item", name="stone", amount=1},
+            },
         results = 
-        {
-            {type="fluid", name="dtk-sulfur-trioxide", amount=100},
-            {type="item", name='dtk-calcium-silicat', amount=1}
-        },
+            {
+                {type="fluid", name="dtk-sulfur-trioxide", amount=100},
+                {type="item", name='dtk-calcium-silicat', amount=1}
+            },
         subgroup = "fluid-recipes",
         order = "a[fluid-chemistry]-f[fluorhydric-acid]",
         crafting_machine_tint =
-        {
-            primary = {r = 0.10, g = 0.90, b = 0.10},
-            secondary = {r = 0.10, g = 0.90, b = 0.10},
-            tertiary = {r = 0.50, g = 0,51, b = 0.51},
-        }
-    },
+            {
+                primary = {r = 0.10, g = 0.90, b = 0.10},
+                secondary = {r = 0.10, g = 0.90, b = 0.10},
+                tertiary = {r = 0.50, g = 0,51, b = 0.51},
+            }
+        },
+
+   
     }
 )
 

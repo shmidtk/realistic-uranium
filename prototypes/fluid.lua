@@ -68,7 +68,7 @@ data:extend(
         energy_required = 6,
         ingredients = 
         {
-            {type="item", name="fluorite", amount=1},
+            {type="item", name="dtk-fluorite", amount=1},
             {type="fluid", name="sulfuric-acid", amount=15},
             {type="fluid", name="water", amount=80},
         },
