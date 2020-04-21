@@ -216,7 +216,7 @@ data:extend(
                 {type="item", name='dtk-calcium-silicat', amount=1}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[fluorhydric-acid]",
+        order = "a[fluid-chemistry]-f[sulfur-trioxide-recipe]",
         crafting_machine_tint =
             {
                 primary = {r = 0.10, g = 0.90, b = 0.10},
@@ -225,7 +225,189 @@ data:extend(
             }
         },
 
-   
+
+
+
+        { -- PURE FLUORUM
+        type = "fluid",
+        name = "dtk-fluorum",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.255, g=0.255, b=0.204},
+        flow_color = {r=0.255, g=0.255, b=0.204},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/fluorum.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorum]"
+        },
+        
+        { -- PROCESSING OF FLUORISATION OF URANIUM TETRAFLUORITE
+        type = "recipe",
+        name = "dtk-fluorum-recipe",
+        icon = "__NuclearShmidtk__/graphics/resources/fluorum.png",
+        icon_size = 64,
+        category = "chemistry",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="item", name="dtk-fluorhydric-acid", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-fluorum", amount=100},
+                {type="fluid", name='hydrogen', amount=100}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[fluorum]"
+        },
+
+
+
+        { --uranium hexafluorite
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid]"
+        },
+        
+        { -- PROCESSING OF FLUORISATION OF URANIUM TETRAFLUORITE
+        type = "recipe",
+        name = "dtk-sulfur-trioxide-recipe",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite.png",
+        icon_size = 64,
+        category = "chemistry",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="item", name="dtk-uranium-tetrafluorite", amount=100},
+                {type="item", name="dtk-fluorum", amount=200},
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite", amount=100}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[uranium-hexafluorite]"
+        },
+
+
+        { --uranium hexafluorite DEPLTED
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite-depleted",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-depleted.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-depleted]"
+        },
+        { --uranium hexafluorite 1% Grade
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-1.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-1]"
+        },
+        { --uranium hexafluorite 2% Grade
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-2.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-2]"
+        },
+        { --uranium hexafluorite 3% Grade
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-3.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-3]"
+        },
+        { --uranium hexafluorite 4% Grade
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-4.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-4]"
+        },
+        { --uranium hexafluorite 5% Grade
+        type = "fluid",
+        name = "dtk-uranium-hexafluorite",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[fluorhydric-acid-5]"
+        },
+        
+        { -- Geseous diffusion
+        type = "recipe",
+        name = "dtk-geseous-diffusion",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+        icon_size = 64,
+        category = "centrifuge",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite", amount=150}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=130},
+                {type="fluid", name="dtk-uranium-hexafluorite-5", amount=20}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[geseous-diffusion]"
+        },
     }
 )
 

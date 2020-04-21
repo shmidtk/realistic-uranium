@@ -53,7 +53,7 @@ data:extend(
           mining_particle = "coal-particle",
           mining_time = 2,
           result = "thorium-ore",
-          required_fluid = "fluorhydric-acid",
+          required_fluid = "dtk-fluorhydric-acid",
           fluid_amount = 25,
         },
       collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},

@@ -32,10 +32,15 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uo2-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-calcium-silicat-to-bricks"})
 
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-tetrafluorite-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-fluorum-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-hexafluorite-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-geseous-diffusion"})
+
+
+
 
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "empty-fuel-cell"})
-table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "fluorite"})
-table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "fluorhydric-acid"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "uranium-238-2"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "uranium-235-2"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "uranium-hexafluoride"})
