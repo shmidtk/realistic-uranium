@@ -388,7 +388,7 @@ data:extend(
         flow_to_energy_ratio = 0.59,
         order = "a[fluid]-b[fluorhydric-acid-5]"
         },
-        
+
         { -- Geseous diffusion
         type = "recipe",
         name = "dtk-geseous-diffusion",
@@ -428,7 +428,7 @@ data:extend(
                 {type="fluid", name="dtk-uranium-hexafluorite-1", amount=70}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[-uranium-centrifuging-1]"
+        order = "a[fluid-chemistry]-f[uranium-centrifuging-1]"
         },
 
         { -- 2% CENTRIFUGING
@@ -449,7 +449,7 @@ data:extend(
                 {type="fluid", name="dtk-uranium-hexafluorite-2", amount=50}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[-uranium-centrifuging-2]"
+        order = "a[fluid-chemistry]-f[uranium-centrifuging-2]"
         },
 
 
@@ -471,8 +471,10 @@ data:extend(
                 {type="fluid", name="dtk-uranium-hexafluorite-3", amount=66}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[-uranium-centrifuging-3]"
+        order = "a[fluid-chemistry]-f[uranium-centrifuging-3]"
         },
+
+
 
         { -- 4% CENTRIFUGING
         type = "recipe",
@@ -492,7 +494,7 @@ data:extend(
                 {type="fluid", name="dtk-uranium-hexafluorite-4", amount=75}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[-uranium-centrifuging-4]"
+        order = "a[fluid-chemistry]-f[uranium-centrifuging-4]"
         },
         
         { -- 5% CENTRIFUGING
@@ -513,8 +515,49 @@ data:extend(
                 {type="fluid", name="dtk-uranium-hexafluorite-5", amount=80}
             },
         subgroup = "fluid-recipes",
-        order = "a[fluid-chemistry]-f[-uranium-centrifuging-5]"
+        order = "a[fluid-chemistry]-f[uranium-centrifuging-5]"
         },
+
+        { --Uranyl fluoride (UO2F2) 5% Grade
+        type = "fluid",
+        name = "dtk-uo2f2-5",
+        default_temperature = 25,
+        heat_capacity = "1KJ",
+        base_color = {r=0.204, g=0.204, b=0.00},
+        flow_color = {r=0.204, g=0.204, b=0.00},
+        max_temperature = 100,
+        icon = "__NuclearShmidtk__/graphics/resources/uo2f2-5.png",
+        icon_size = 64,
+        pressure_to_speed_ratio = 0.4,
+        flow_to_energy_ratio = 0.59,
+        order = "a[fluid]-b[uranium-fluoride-5]"
+        },
+        { -- 5% grade Uranium FLUORIDE UO2F2 recipe (back to uo2)
+        type = "recipe",
+        name = "dtk-uo2f2-5",
+        icon = "__NuclearShmidtk__/graphics/resources/uo2f2-5.png",
+        icon_size = 64,
+        category = "chemistry",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-5", amount=100},
+                {type="fluid", name="steam", amount=200}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uo2f2-5", amount=100},
+                {type="fluid", name="dtk-fluorhydric-acid", amount=400}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[uranium-fluoride-5]"
+        },
+
     }
+
+
+
+
 )
 

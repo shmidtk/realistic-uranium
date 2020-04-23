@@ -235,7 +235,7 @@
                         {type="item", name="dtk-uo2", amount=5},
                         {type="fluid", name="water", amount=500},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/recipes/uo2.png",
+        icon = "__NuclearShmidtk__/graphics/resources/uo2.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "f[uo2]"
@@ -305,7 +305,122 @@
         order = "f[uo3-recipe]"
         },
 
+        { -- 5% grade Ammonium diuranate ADU 
+        type = "item",
+        name = "dtk-adu-5",
+        icon = "__NuclearShmidtk__/graphics/resources/adu-5.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[ammonium-diuranate]",
+        stack_size = 100
+        },
 
+        {  -- Ammonium diuranate recipe
+        type = "recipe",
+        name = "dtk-adu-recipe",
+        category = "uranium-processing",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="fluid",  name = "dtk-uo2f2-5", amount = 100},
+                        {type="fluid",  name = "nitric-acid", amount = 100},
+                        {type="fluid",  name = "water", amount = 100}
+                    },
+        results = {
+                        {type="item", name="dtk-adu-5", amount=1},
+                        {type="fluid", name="water", amount=95},                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/adu-5.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[ammonium-diuranate]"
+        },
+
+        { -- 5% grade Uranium dioxide
+        type = "item",
+        name = "dtk-uo2-5",
+        icon = "__NuclearShmidtk__/graphics/resources/uo2-5.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[ammonium-diuranate]",
+        stack_size = 100
+        },
+
+        {  -- Ammonium diuranate recipe
+        type = "recipe",
+        name = "dtk-adu-uo2-5",
+        category = "uranium-processing",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "dtk-adu-5", amount = 1},
+                        {type="fluid",  name = "hydrogen", amount = 100}
+                    },
+        results = {
+                        {type="item", name="dtk-uo2-5", amount=1}                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/uo2-5.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[ammonium-diuranate]"
+        },
+
+        { -- Empty Fuel Cell
+        type = "item",
+        name = "dtk-empty-fuel-cell",
+        icon = "__NuclearShmidtk__/graphics/resources/empty-fuel-cell.png",
+        icon_size = 32,
+        subgroup = "intermediate-product",
+        order = "h[empty-fuel-cell]",
+        stack_size = 10
+        },
+
+        {  -- Empty Fuel Cell recipe
+        type = "recipe",
+        name = "dtk-empty-fuel-cell",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "steel-plate", amount = 10},
+                        {type="item",  name = "rare-metals", amount = 1}
+                    },
+        results = {
+                        {type="item", name="dtk-empty-fuel-cell", amount=10}                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/empty-fuel-cell.png",
+        icon_size = 32,
+        subgroup = 'intermediate-product',
+        order = "f[empty-fuel-cell]"
+        },
+
+        { -- Uranium pallets
+        type = "item",
+        name = "dtk-uranium-pallets-5",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-pallets-5.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[uranium-pallets-5]",
+        stack_size = 10
+        },
+
+        {  --  Uranium pallets recipe
+        type = "recipe",
+        name = "dtk-uranium-pallets-recipe",
+        category = "smelting",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "dtk-uo2-5", amount = 1}
+                    },
+        results = {
+                        {type="item", name="dtk-uranium-pallets-5", amount=1}                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-pallets-5.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[uranium-pallets-5]"
+        },
+        
     }
   )
 

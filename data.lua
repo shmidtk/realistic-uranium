@@ -31,11 +31,15 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-sulfuric-acid-from-trioxide"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uo2-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-calcium-silicat-to-bricks"})
-
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-tetrafluorite-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-fluorum-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-hexafluorite-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-geseous-diffusion"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uo2f2-5"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-adu-recipe"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-adu-uo2-5"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-empty-fuel-cell"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-pallets-recipe"})
 
 
 
@@ -55,6 +59,9 @@ table.insert(data.raw["technology"]["nuclear-power"].effects, {type = "unlock-re
 table.insert(data.raw["technology"]["uranium-ammo"].effects, {type = "unlock-recipe", recipe = "highly-radioactive-rounds-magazine"})
 table.insert(data.raw["technology"]["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "nuclear-uranium-bomb"})
 table.insert(data.raw["technology"]["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "nuclear-plutonium-bomb"})
+
+
+
 
 data:extend({
     {
@@ -116,3 +123,45 @@ end
 
 data.raw.resource["uranium-ore"].minable.required_fluid = nil;
 data.raw.resource["uranium-ore"].minable.fluid_amount  = 0;
+
+-- CHANGES TO VANILA CENTRIFUGE
+data.raw["assembling-machine"]["centrifuge"].fluid_boxes =	{
+																{
+																	production_type = "input",
+																	pipe_picture = assembler3pipepictures(),
+																	pipe_covers = pipecoverspictures(),
+																	base_area = 10,
+																	base_level = -1,
+																	pipe_connections = {{ type="input", position = {0, -2} }},
+																	secondary_draw_orders = { north = -1 }
+																},
+																{
+																	production_type = "output",
+																	pipe_picture = assembler3pipepictures(),
+																	pipe_covers = pipecoverspictures(),
+																	base_area = 10,
+																	base_level = 1,
+																	pipe_connections = {{ type="output", position = {0, 2} }},
+																	secondary_draw_orders = { north = -1 }
+																},
+																{
+																	production_type = "output",
+																	pipe_picture = assembler3pipepictures(),
+																	pipe_covers = pipecoverspictures(),
+																	base_area = 10,
+																	base_level = 1,
+																	pipe_connections = {{ type="output", position = {2, 0} }},
+																	secondary_draw_orders = { north = -1 }
+																},
+																off_when_no_fluid_recipe = true
+															}
+
+-- CHANGE TO URANIUM FUEL CELL
+data.raw["recipe"]["uranium-fuel-cell"].ingredients = 
+						{
+							{type="item",  name = "dtk-uranium-pallets-5", amount = 1},
+							{type="item",  name = "dtk-empty-fuel-cell", amount = 1}
+						}
+data.raw["recipe"]["uranium-fuel-cell"].result_count = 1
+
+
