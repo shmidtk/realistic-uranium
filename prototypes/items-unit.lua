@@ -235,10 +235,10 @@
                         {type="item", name="dtk-uo2", amount=5},
                         {type="fluid", name="water", amount=500},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/recipes/uo3-recipe.png",
+        icon = "__NuclearShmidtk__/graphics/recipes/uo2.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
-        order = "f[uo3-recipe]"
+        order = "f[uo2]"
         },
    
 
@@ -287,7 +287,7 @@
 
         {  -- Prodcution of UF4 (Uranium Tetrafluorite)
         type = "recipe",
-        name = "dtk-uo2-recipe",
+        name = "dtk-uranium-tetrafluorite-recipe",
         category = "chemistry",
         energy_required = 12,
         enabled = false,

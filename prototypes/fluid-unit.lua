@@ -160,6 +160,7 @@ data:extend(
             flow_to_energy_ratio = 0.59,
             order = "a[fluid]-b[fluorhydric-acid]"
         },
+
         { --fluorhydric-acid Production
             type = "recipe",
             name = "dtk-fluorhydric-acid",
@@ -253,7 +254,7 @@ data:extend(
         energy_required = 6,
         ingredients = 
             {
-                {type="item", name="dtk-fluorhydric-acid", amount=100}
+                {type="fluid", name="dtk-fluorhydric-acid", amount=100}
             },
         results = 
             {
@@ -283,7 +284,7 @@ data:extend(
         
         { -- PROCESSING OF FLUORISATION OF URANIUM TETRAFLUORITE
         type = "recipe",
-        name = "dtk-sulfur-trioxide-recipe",
+        name = "dtk-uranium-hexafluorite-recipe",
         icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite.png",
         icon_size = 64,
         category = "chemistry",
@@ -291,8 +292,8 @@ data:extend(
         energy_required = 6,
         ingredients = 
             {
-                {type="item", name="dtk-uranium-tetrafluorite", amount=100},
-                {type="item", name="dtk-fluorum", amount=200},
+                {type="item", name="dtk-uranium-tetrafluorite", amount=1},
+                {type="fluid", name="dtk-fluorum", amount=200},
             },
         results = 
             {
@@ -319,7 +320,7 @@ data:extend(
         },
         { --uranium hexafluorite 1% Grade
         type = "fluid",
-        name = "dtk-uranium-hexafluorite",
+        name = "dtk-uranium-hexafluorite-1",
         default_temperature = 25,
         heat_capacity = "1KJ",
         base_color = {r=0.204, g=0.204, b=0.00},
@@ -333,7 +334,7 @@ data:extend(
         },
         { --uranium hexafluorite 2% Grade
         type = "fluid",
-        name = "dtk-uranium-hexafluorite",
+        name = "dtk-uranium-hexafluorite-2",
         default_temperature = 25,
         heat_capacity = "1KJ",
         base_color = {r=0.204, g=0.204, b=0.00},
@@ -347,7 +348,7 @@ data:extend(
         },
         { --uranium hexafluorite 3% Grade
         type = "fluid",
-        name = "dtk-uranium-hexafluorite",
+        name = "dtk-uranium-hexafluorite-3",
         default_temperature = 25,
         heat_capacity = "1KJ",
         base_color = {r=0.204, g=0.204, b=0.00},
@@ -361,7 +362,7 @@ data:extend(
         },
         { --uranium hexafluorite 4% Grade
         type = "fluid",
-        name = "dtk-uranium-hexafluorite",
+        name = "dtk-uranium-hexafluorite-4",
         default_temperature = 25,
         heat_capacity = "1KJ",
         base_color = {r=0.204, g=0.204, b=0.00},
@@ -375,7 +376,7 @@ data:extend(
         },
         { --uranium hexafluorite 5% Grade
         type = "fluid",
-        name = "dtk-uranium-hexafluorite",
+        name = "dtk-uranium-hexafluorite-5",
         default_temperature = 25,
         heat_capacity = "1KJ",
         base_color = {r=0.204, g=0.204, b=0.00},
@@ -393,9 +394,9 @@ data:extend(
         name = "dtk-geseous-diffusion",
         icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
         icon_size = 64,
-        category = "centrifuge",
+        category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 300,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite", amount=150}
@@ -407,6 +408,112 @@ data:extend(
             },
         subgroup = "fluid-recipes",
         order = "a[fluid-chemistry]-f[geseous-diffusion]"
+        },
+
+        { -- 1% CENTRIFUGING
+        type = "recipe",
+        name = "dtk-uranium-centrifuging-1",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-1.png",
+        icon_size = 64,
+        category = "centrifuging",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=30},
+                {type="fluid", name="dtk-uranium-hexafluorite-1", amount=70}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[-uranium-centrifuging-1]"
+        },
+
+        { -- 2% CENTRIFUGING
+        type = "recipe",
+        name = "dtk-uranium-centrifuging-2",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-2.png",
+        icon_size = 64,
+        category = "centrifuging",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-1", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=50},
+                {type="fluid", name="dtk-uranium-hexafluorite-2", amount=50}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[-uranium-centrifuging-2]"
+        },
+
+
+        { -- 3% CENTRIFUGING
+        type = "recipe",
+        name = "dtk-uranium-centrifuging-3",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-3.png",
+        icon_size = 64,
+        category = "centrifuging",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-2", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=37},
+                {type="fluid", name="dtk-uranium-hexafluorite-3", amount=66}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[-uranium-centrifuging-3]"
+        },
+
+        { -- 4% CENTRIFUGING
+        type = "recipe",
+        name = "dtk-uranium-centrifuging-4",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-4.png",
+        icon_size = 64,
+        category = "centrifuging",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-3", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=25},
+                {type="fluid", name="dtk-uranium-hexafluorite-4", amount=75}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[-uranium-centrifuging-4]"
+        },
+        
+        { -- 5% CENTRIFUGING
+        type = "recipe",
+        name = "dtk-uranium-centrifuging-5",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+        icon_size = 64,
+        category = "centrifuging",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-4", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=20},
+                {type="fluid", name="dtk-uranium-hexafluorite-5", amount=80}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[-uranium-centrifuging-5]"
         },
     }
 )

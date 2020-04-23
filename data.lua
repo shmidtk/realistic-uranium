@@ -22,7 +22,7 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-plant-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-salt-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-yellow-cake"})
-table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-yellow-cake-drumming"})
+--table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-yellow-cake-drumming"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-ok-liquoir-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-unh-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-unh-backing-to-uo3"})
