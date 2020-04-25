@@ -554,6 +554,18 @@ data:extend(
         order = "a[fluid-chemistry]-f[uranium-fluoride-5]"
         },
 
+        { -- Uranium plutunium solution
+        type = "fluid",
+        name = "dtk-uranium-plutonium-solution",
+        icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[uranium-plutonium-solution]",
+        stack_size = 100
+        },
+
+        
+
     }
 
 

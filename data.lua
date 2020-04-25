@@ -164,4 +164,15 @@ data.raw["recipe"]["uranium-fuel-cell"].ingredients =
 						}
 data.raw["recipe"]["uranium-fuel-cell"].result_count = 1
 
-
+data.raw["recipe"]["nuclear-fuel-reprocessing"].ingredients = 
+						{
+							{type="item",  name = "used-up-uranium-fuel-cell", amount = 1},
+							{type="item",  name = "nitric-acid", amount = 100}					
+						}			
+data.raw["recipe"]["nuclear-fuel-reprocessing"].results =
+						{
+							{type="fluid",  name = "dtk-uranium-plutonium-solution", amount = 100},
+							{type="item",  name = "dtk-low-radioactive-waste", amount = 6},
+							{type="item",  name = "steel-plate", amount = 5},
+							{type="item",  name = "rare-metal", amount = 1},
+						}

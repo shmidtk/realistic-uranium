@@ -299,10 +299,10 @@
                         {type="item", name="dtk-uranium-tetrafluorite", amount=1},
                         {type="fluid", name="steam", amount=500, temperature = 150},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/recipes/uo3-recipe.png",
+        icon = "__NuclearShmidtk__/graphics/recipes/uranium-tetrafluorite.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
-        order = "f[uo3-recipe]"
+        order = "f[uranium-tetrafluorite]"
         },
 
         { -- 5% grade Ammonium diuranate ADU 
@@ -421,6 +421,59 @@
         order = "f[uranium-pallets-5]"
         },
         
+        --- DEPLETED URANIUM PROCESSING
+        
+        { -- Uranium Tetrafluorite UF4
+        type = "item",
+        name = "dtk-uranium-tetrafluorite-depleted",
+        icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[dtk-uranium-tetrafluorite-depleted]",
+        stack_size = 100
+        },
+        
+        
+        {  --  DEPLETED UF4 FROM DEPLETED UF6
+        type = "recipe",
+        name = "dtk-uranium-tetrafluorite-depleted",
+        category = "uranium-processing",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="fluid",  name = "dtk-uranium-hexafluorite-depleted", amount = 100},
+                        {type="fluid",  name = "hydrogen-chloride", amount = 200},
+                    },
+        results = {
+                        {type="item", name="dtk-uranium-tetrafluorite-depleted", amount=1}
+                        {type="fluid", name="dtk-fluorhydric-acid", amount=200}     
+                        {type="fluid", name="chlorine", amount=100}                           
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[uf-4-depleted]"
+        },
+
+
+        {  --  EXTRACTION OF METALLIC U-238 - ELECTROLISYS WITH MAGNIUM
+        type = "recipe",
+        name = "dtk-u-238",
+        category = "smelting",
+        energy_required = 12,
+        enabled = false,
+        ingredients = {
+                        {type="item",  name = "dtk-uranium-tetrafluorite-depleted", amount = 1},
+                        {type="item",  name = "rare-metal", amount = 2},
+                    },
+        results = {
+                        {type="item", name="uranium-238", amount=1}                      
+                    },
+        icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+        icon_size = 64,
+        subgroup = 'intermediate-product',
+        order = "f[uf-4-depleted]"
+        },
     }
   )
 
