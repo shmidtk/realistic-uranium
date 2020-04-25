@@ -445,8 +445,8 @@
                         {type="fluid",  name = "hydrogen-chloride", amount = 200},
                     },
         results = {
-                        {type="item", name="dtk-uranium-tetrafluorite-depleted", amount=1}
-                        {type="fluid", name="dtk-fluorhydric-acid", amount=200}     
+                        {type="item", name="dtk-uranium-tetrafluorite-depleted", amount=1},
+                        {type="fluid", name="dtk-fluorhydric-acid", amount=200},
                         {type="fluid", name="chlorine", amount=100}                           
                     },
         icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
@@ -457,23 +457,151 @@
 
 
         {  --  EXTRACTION OF METALLIC U-238 - ELECTROLISYS WITH MAGNIUM
-        type = "recipe",
-        name = "dtk-u-238",
-        category = "smelting",
-        energy_required = 12,
-        enabled = false,
-        ingredients = {
-                        {type="item",  name = "dtk-uranium-tetrafluorite-depleted", amount = 1},
-                        {type="item",  name = "rare-metal", amount = 2},
-                    },
-        results = {
-                        {type="item", name="uranium-238", amount=1}                      
-                    },
+            type = "recipe",
+            name = "dtk-u-238",
+            category = "smelting",
+            energy_required = 12,
+            enabled = false,
+            ingredients = {
+                            {type="item",  name = "dtk-uranium-tetrafluorite-depleted", amount = 1},
+                            {type="item",  name = "rare-metal", amount = 2},
+                        },
+            results = {
+                            {type="item", name="uranium-238", amount=1}                      
+                        },
+            icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+            icon_size = 64,
+            subgroup = 'intermediate-product',
+            order = "f[uf-4-depleted]"
+        },
+
+        { -- Uranium Tetrafluorite UF4
+        type = "item",
+        name = "dtk-uranium-tetrafluorite-depleted",
         icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
         icon_size = 64,
-        subgroup = 'intermediate-product',
-        order = "f[uf-4-depleted]"
+        subgroup = "intermediate-product",
+        order = "h[dtk-uranium-tetrafluorite-depleted]",
+        stack_size = 100
         },
+        { -- Low radiactive waste
+        type = "item",
+        name = "dtk-low-radioactive-waste",
+        icon = "__NuclearShmidtk__/graphics/resources/radioactive-waste.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[dtk-low-radioactive-waste]",
+        stack_size = 100
+        },
+        { -- Plutonium
+        type = "item",
+        name = "dtk-plutonium",
+        icon = "__NuclearShmidtk__/graphics/resources/plutonium.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[plutonium]",
+        stack_size = 100
+        },
+
+        { -- Plutonium extraction
+        type = "recipe",
+        name = "dtk-plutonium-extraction",
+        icon = "__NuclearShmidtk__/graphics/resources/plutonium.png",
+        icon_size = 64,
+        category = "uranium-processing",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-plutonium-solution", amount=100},
+                {type="fluid", name="sulfur-acid", amount=100}
+            },
+        results = 
+            {
+                {type="item", name="dtk-plutonium", amount=1},
+                {type="fluid", name="water", amount=100}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[plutonium-extraction]"
+        },
+        
+        { -- MOX fuel pellets
+        type = "item",
+        name = "dtk-mox-fuel-pellet",
+        icon = "__NuclearShmidtk__/graphics/resources/mox-pellets.png",
+        icon_size = 64,
+        subgroup = "intermediate-product",
+        order = "h[plutonium]",
+        stack_size = 100
+        },
+
+        { -- MOX fuel pellets recipe
+        type = "recipe",
+        name = "dtk-mox-fuel-pellet",
+        icon = "__NuclearShmidtk__/graphics/resources/mox-pellets.png",
+        icon_size = 64,
+        category = "smelting",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-plutonium", amount=7},
+                {type="fluid", name="uranium-238", amount=93}
+            },
+        results = 
+            {
+                {type="item", name="dtk-mox-pellets", amount=1}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[plutonium-extraction]"
+        },        
+
+        { -- MOX fuel fuel-cell
+        type = "item",
+        name = "dtk-mox-fuel-cell",
+        icon = "__NuclearShmidtk__/graphics/resources/mox-fuel-cell.png",
+        icon_size = 32,
+        subgroup = "intermediate-product",
+        order = "h[mox-fuel-cell]",
+        fuel_category = "nuclear",
+        burnt_result = "used-up-mox-fuel-cell",
+        fuel_value = "8GJ",
+        stack_size = 50
+        },
+
+        { -- MOX fuel fuel-cell
+        type = "item",
+        name = "used-up-mox-fuel-cell",
+        icon = "__NuclearShmidtk__/graphics/resources/used-up-mox-fuel-cell.png",
+        icon_size = 32,
+        subgroup = "intermediate-product",
+        order = "h[up-mox-fuel-cell]",
+        stack_size = 50
+        },
+
+        { --  MOX fuel fuel-cell recipe 
+        type = "recipe",
+        name = "dtk-mox-fuel-cell",
+        icon = "__NuclearShmidtk__/graphics/resources/mox-fuel-cell.png",
+        icon_size = 32,
+        category = "crafting",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-mox-pellets", amount=1},
+                {type="item",  name = "dtk-empty-fuel-cell", amount = 1}
+            },
+        results = 
+            {
+                {type="item", name="dtk-mox-fuel-cell", amount=1}
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[dtk-mox-fuel-cell]"
+        },          
+
+
+
     }
   )
 

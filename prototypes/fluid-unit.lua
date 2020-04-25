@@ -556,20 +556,124 @@ data:extend(
 
         { -- Uranium plutunium solution
         type = "fluid",
-        name = "dtk-uranium-plutonium-solution",
+        name = "dtk-uranium-plutonium-solution-96-1",
         icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "h[uranium-plutonium-solution]",
         stack_size = 100
         },
-
+--        { -- Plutonium solution
+--        type = "fluid",
+--        name = "dtk-plutonium-solution",
+--        icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
+--        icon_size = 64,
+--        subgroup = "intermediate-product",
+--        order = "h[uranium-plutonium-solution]",
+--        stack_size = 100
+--        },
+--        { -- high-radiactive-waste
+--        type = "fluid",
+--        name = "dtk-high-radiactive-waste",
+--        icon = "__NuclearShmidtk__/graphics/resources/high-radioctive-waste.png",
+--        icon_size = 64,
+--        subgroup = "intermediate-product",
+--        order = "h[high-radiactive-waste]",
+--        stack_size = 100
+--        },
+        
+        { -- PUREX Process
+        type = "recipe",
+        name = "dtk-purex-1",
+        icon = "__NuclearShmidtk__/graphics/resources/purex.png",
+        icon_size = 64,
+        category = "uranium-processing",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-plutonium-solution", amount=100},
+                {type="fluid", name="sulfur-acid", amount=100},
+                {type="fluid", name="light-oiil", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-1", amount=96},
+                {type="fluid", name="dtk-high-radiactive-waste", amount=3},
+                {type="fluid", name="dtk-plutonium-solution", amount=1},
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[dtk-purex-2]"
+        },
         
 
+--        { -- MOX used fuel solution
+--        type = "fluid",
+--        name = "dtk-uranium-plutonium-solution-88-5",
+--        icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
+--        icon_size = 64,
+--        subgroup = "intermediate-product",
+--        order = "h[uranium-plutonium-solution]",
+--        stack_size = 100
+--        },
+
+        { -- PUREX Process of MOX FUEL
+        type = "recipe",
+        name = "dtk-purex-2",
+        icon = "__NuclearShmidtk__/graphics/resources/purex.png",
+        icon_size = 64,
+        category = "uranium-processing",
+        enabled = false,
+        energy_required = 6,
+        ingredients = 
+            {
+                {type="fluid", name="dtk-uranium-plutonium-solution-88-5", amount=100},
+                {type="fluid", name="sulfur-acid", amount=100},
+                {type="fluid", name="light-oiil", amount=100}
+            },
+        results = 
+            {
+                {type="fluid", name="dtk-uranium-hexafluorite-5", amount=92},
+                {type="fluid", name="dtk-high-radiactive-waste", amount=3},
+                {type="fluid", name="dtk-plutonium-solution", amount=5},
+            },
+        subgroup = "fluid-recipes",
+        order = "a[fluid-chemistry]-f[dtk-purex-2]"
+        },
+
+
+--        { -- Thorium molten salt
+--        type = "fluid",
+--        name = "dtk-molten-salt",
+--        icon = "__NuclearShmidtk__/graphics/resources/uranium-slurry.png",
+--        icon_size = 32,
+--        subgroup = "intermediate-product",
+--        order = "h[mox-fuel-cell]",
+--        fuel_category = "nuclear",
+--        burnt_result = "dtk-molten salt",
+--        fuel_value = "8GJ",
+--        stack_size = 50
+--        },
+--        { -- PUREX Process of MOX FUEL
+--        type = "recipe",
+--        name = "dtk-molten-salt",
+--        icon = "__NuclearShmidtk__/graphics/resources/uranium-slurry.png",
+--        icon_size = 64,
+--        category = "uranium-processing",
+--        enabled = false,
+--        energy_required = 6,
+--        ingredients = 
+--            {
+--                {type="fluid", name="sulfur-acid", amount=100}
+--            },
+--        results = 
+--            {
+--                {type="fluid", name="dtk-molten-salt", amount=100}
+--            },
+--        subgroup = "fluid-recipes",
+--        order = "a[fluid-chemistry]-f[dtk-purex-2]"
+--        },   
+
     }
-
-
-
-
 )
 
