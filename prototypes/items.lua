@@ -10,4 +10,15 @@ data:extend(
     place_result = "ms-nuclear-reactor",
     stack_size = 10
   },
+
+  { -- THORIUM ORE
+  type = "item",
+  name = "thorium-ore",
+  icon = "__NuclearShmidtk__/graphics/icons/thorium-ore.png",
+  icon_size = 64,
+  subgroup = "raw-resource",
+  order = "g[thorium-ore]",
+  stack_size = 50
+},
+
 })

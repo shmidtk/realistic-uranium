@@ -64,12 +64,12 @@ data:extend(
             },
             {
                 type = "unlock-recipe",
-                recipe = "dtk-purex-2"
-            },  
+                recipe = "dtk-used-up-mox-fuel-cell-processing"
+            },
             {
                 type = "unlock-recipe",
-                recipe = "dtk-molten-salt"
-            },             
+                recipe = "dtk-purex-2"
+            },      
         },
         prerequisites = {"nuclear-fuel-reprocessing"},
         prerequisites = {"nuclear-power"},

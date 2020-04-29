@@ -39,7 +39,8 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-adu-uo2-5"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-empty-fuel-cell"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-pallets-recipe"})
-
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-tetrafluorite-depleted"})
+table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-u-238"})
 
 
 data:extend({
@@ -86,7 +87,7 @@ data.raw["assembling-machine"]["centrifuge"].fluid_boxes =	{
 																	pipe_picture = assembler3pipepictures(),
 																	pipe_covers = pipecoverspictures(),
 																	base_area = 10,
-																	base_level = 1,
+																	base_level = -1,
 																	pipe_connections = {{ type="output", position = {0, 2} }},
 																	secondary_draw_orders = { north = -1 }
 																},
@@ -95,36 +96,18 @@ data.raw["assembling-machine"]["centrifuge"].fluid_boxes =	{
 																	pipe_picture = assembler3pipepictures(),
 																	pipe_covers = pipecoverspictures(),
 																	base_area = 10,
-																	base_level = 1,
+																	base_level = -1,
 																	pipe_connections = {{ type="output", position = {2, 0} }},
 																	secondary_draw_orders = { north = -1 }
 																},
 																off_when_no_fluid_recipe = true
 															}
 
--- CHANGE TO URANIUM FUEL CELL
-data.raw["recipe"]["uranium-fuel-cell"].ingredients = 
-						{
-							{type="item",  name = "dtk-uranium-pallets-5", amount = 1},
-							{type="item",  name = "dtk-empty-fuel-cell", amount = 1}
-						}
-data.raw["recipe"]["uranium-fuel-cell"].result_count = 1
 
---data.raw["recipe"]["nuclear-fuel-reprocessing"].ingredients = 
---						{
---							{type="item",  name = "used-up-uranium-fuel-cell", amount = 1},
---							{type="item",  name = "nitric-acid", amount = 100}					
---						}			
---data.raw["recipe"]["nuclear-fuel-reprocessing"].results =
---						{
---							{type="fluid",  name = "dtk-uranium-plutonium-solution", amount = 100},
---							{type="item",  name = "dtk-low-radioactive-waste", amount = 6},
---							{type="item",  name = "steel-plate", amount = 5},
---							{type="item",  name = "rare-metal", amount = 1},
---						}
 
---table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-plutonium-extraction"})
---table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-purex-1"})
+table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-plutonium-extraction"})
+table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-purex-1"})
 
---data.raw["recipe"]["nuclear-fuel-reprocessing"].hiden = true
 
+data.raw.recipe["kovarex-enrichment-process"].hidden = true
+data.raw.recipe["uranium-processing"].hidden = true
