@@ -1,9 +1,9 @@
 {
-	"name": "NuclearShmidtk",
-	"version": "0.0.3",
-	"title": "Test",
-	"author": "Test",
+	"name": "RealisticUranium",
+	"version": "0.0.1",
+	"title": "Realistic Uranium",
+	"author": "dtk",
 	"factorio_version": "0.18",
-	"description": "Adds neptunium, plutonium, thorium and radium processing.",
+	"description": "Adds close to reality uranium processing",
 	"dependencies": ["Krastorio2 >= 0.9.9"]
  }

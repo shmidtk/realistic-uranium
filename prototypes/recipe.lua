@@ -26,7 +26,7 @@ data:extend(
 --                  },
 --        main_product= "",
 --        icon_mipmaps = 4,
---      icon = "__NuclearShmidtk__/graphics/icons/uranium-slurry.png",
+--      icon = "__RealisticUranium__/graphics/icons/uranium-slurry.png",
  --       icon_size = 32,
  --       subgroup = "fluid-recipes",
  --       order = "a[fluid-chemistry]-f[uranium-slurry]"
@@ -48,7 +48,7 @@ data:extend(
                    {type="fluid", name="hydrogen", amount= 14}  --Krastorio Hydrogen
  
                 },
-    icon = "__NuclearShmidtk__/graphics/resources/uranium-acid-solution.png",
+    icon = "__RealisticUranium__/graphics/resources/uranium-acid-solution.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-f[uranium-slurry]"
@@ -67,7 +67,7 @@ data:extend(
                     {type="fluid", name="water", amount = 75},
                     {type="item", name="stone", amount= 24} 
                 },
-    icon = "__NuclearShmidtk__/graphics/recipes/water-treatment.png",
+    icon = "__RealisticUranium__/graphics/recipes/water-treatment.png",
     icon_size = 64,
     subgroup = "fluid-recipes",
     order = "a[fluid-chemistry]-f[dirty-water-treatment]"

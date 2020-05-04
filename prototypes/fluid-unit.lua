@@ -9,7 +9,7 @@ local dtk_uranium_slurry = table.deepcopy(standard_fluid)
 dtk_uranium_slurry.name = 'dtk-uranium-slurry'
 dtk_uranium_slurry.base_color = {r=0.0, g=0.102, b=0.0}
 dtk_uranium_slurry.flow_color = {r=0.0, g=0.102, b=0.0}
-dtk_uranium_slurry.icon = "__NuclearShmidtk__/graphics/resources/uranium-slurry.png"
+dtk_uranium_slurry.icon = "__RealisticUranium__/graphics/resources/uranium-slurry.png"
 dtk_uranium_slurry.icon_size = 64
 dtk_uranium_slurry.order = "u[uranium-fluids]-b[uranium-slurry]"
 
@@ -18,7 +18,7 @@ local dtk_uranium_acid_slurry = table.deepcopy(standard_fluid)
 dtk_uranium_acid_slurry.name = 'dtk-uranium-acid-solution'
 dtk_uranium_acid_slurry.base_color = {r=0.153, g=0.153, b=0.0}
 dtk_uranium_acid_slurry.flow_color = {r=0.153, g=0.153, b=0.0}
-dtk_uranium_acid_slurry.icon = "__NuclearShmidtk__/graphics/resources/uranium-acid-solution.png"
+dtk_uranium_acid_slurry.icon = "__RealisticUranium__/graphics/resources/uranium-acid-solution.png"
 dtk_uranium_acid_slurry.icon_size = 64
 dtk_uranium_acid_slurry.order = "u[uranium-fluids]-b[uranium-slurry]"
 
@@ -28,7 +28,7 @@ local dtk_stone_slurry = table.deepcopy(standard_fluid)
 dtk_stone_slurry.name = 'dtk-stone-slurry'
 dtk_stone_slurry.base_color = {145, 110, 39}
 dtk_stone_slurry.flow_color = {145, 110, 39}
-dtk_stone_slurry.icon = "__NuclearShmidtk__/graphics/resources/dirty-water-2.png"
+dtk_stone_slurry.icon = "__RealisticUranium__/graphics/resources/dirty-water-2.png"
 dtk_stone_slurry.icon_size = 64
 dtk_stone_slurry.order = "u[uranium-fluids]-b[dirty_water]"
 
@@ -37,7 +37,7 @@ local dtk_uranium_salt_solution = table.deepcopy(standard_fluid)
 dtk_uranium_salt_solution.name = 'dtk-uranium-salt-solution'
 dtk_uranium_salt_solution.base_color = {181, 162, 0}
 dtk_uranium_salt_solution.flow_color = {181, 162, 0}
-dtk_uranium_salt_solution.icon = "__NuclearShmidtk__/graphics/resources/uranium-salt-solution.png"
+dtk_uranium_salt_solution.icon = "__RealisticUranium__/graphics/resources/uranium-salt-solution.png"
 dtk_uranium_salt_solution.icon_size = 64
 dtk_uranium_salt_solution.order = "u[uranium-fluids]-b[uranium-salt-solution]"
 
@@ -70,7 +70,7 @@ data:extend(
             results = {
             				{type="fluid", name="dtk-uranium-slurry", amount=100}
                       },
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-slurry.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-slurry.png",
             icon_size = 64,
             subgroup = "fluid-recipes",
             order = "u[uranium-fluid-chemistry]-f[uranium-slurry]"
@@ -91,7 +91,7 @@ data:extend(
             results = {
                             {type="fluid", name="dtk-uranium-acid-solution", amount=4000}
                       },
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-acid-solution.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-acid-solution.png",
             icon_size = 64,
             subgroup = "fluid-recipes",
             order = "u[uranium-fluid-chemistry]-f[uranium-slurry]"
@@ -108,7 +108,7 @@ data:extend(
             base_color = {r=0.0, g=0.0, b=0.0},
             flow_color = {r=0.0, g=0.0, b=0.0},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/ok-liquoir.png",
+            icon = "__RealisticUranium__/graphics/resources/ok-liquoir.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -129,7 +129,7 @@ data:extend(
         results = {
                         {type="fluid", name="dtk-ok-liquoir", amount= 1200}
                   },
-        icon = "__NuclearShmidtk__/graphics/resources/ok-liquoir.png",
+        icon = "__RealisticUranium__/graphics/resources/ok-liquoir.png",
         icon_size = 64,
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[ok-liquoir]"
@@ -144,7 +144,7 @@ data:extend(
             base_color = {r=0.52, g=0.78, b=0.06},
             flow_color = {r=0.52, g=0.78, b=0.06},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/icons/fluorhydric-acid.png",
+            icon = "__RealisticUranium__/graphics/icons/fluorhydric-acid.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -154,7 +154,7 @@ data:extend(
         { --fluorhydric-acid Production
             type = "recipe",
             name = "dtk-fluorhydric-acid",
-            icon = "__NuclearShmidtk__/graphics/icons/fluorhydric-acid.png",
+            icon = "__RealisticUranium__/graphics/icons/fluorhydric-acid.png",
             icon_size = 64,
             category = "chemistry",
             enabled = false,
@@ -181,7 +181,7 @@ data:extend(
             base_color = {r=0.255, g=0.255, b=0.00},
             flow_color = {r=0.255, g=0.255, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/sulfur-trioxide.png",
+            icon = "__RealisticUranium__/graphics/resources/sulfur-trioxide.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -191,7 +191,7 @@ data:extend(
         { -- PROCESSING OF CALCUIM SULFAT TO RECOVER SULUR TRIOXIDE
         type = "recipe",
         name = "dtk-sulfur-trioxide-recipe",
-        icon = "__NuclearShmidtk__/graphics/resources/sulfur-trioxide.png",
+        icon = "__RealisticUranium__/graphics/resources/sulfur-trioxide.png",
         icon_size = 64,
         category = "chemistry",
         enabled = false,
@@ -204,7 +204,7 @@ data:extend(
         results = 
             {
                 {type="fluid", name="dtk-sulfur-trioxide", amount=100},
-                {type="item", name='dtk-calcium-silicat', amount=1}
+                {type="item", name='sand', amount=1}
             },
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[sulfur-trioxide-recipe]",
@@ -227,7 +227,7 @@ data:extend(
         base_color = {r=0.255, g=0.255, b=0.204},
         flow_color = {r=0.255, g=0.255, b=0.204},
         max_temperature = 100,
-        icon = "__NuclearShmidtk__/graphics/resources/fluorum.png",
+        icon = "__RealisticUranium__/graphics/resources/fluorum.png",
         icon_size = 64,
         pressure_to_speed_ratio = 0.4,
         flow_to_energy_ratio = 0.59,
@@ -237,7 +237,7 @@ data:extend(
         { -- PROCESSING OF FLUORISATION OF URANIUM TETRAFLUORITE
         type = "recipe",
         name = "dtk-fluorum-recipe",
-        icon = "__NuclearShmidtk__/graphics/resources/fluorum.png",
+        icon = "__RealisticUranium__/graphics/resources/fluorum.png",
         icon_size = 64,
         category = "chemistry",
         enabled = false,
@@ -265,7 +265,7 @@ data:extend(
         base_color = {r=0.204, g=0.204, b=0.00},
         flow_color = {r=0.204, g=0.204, b=0.00},
         max_temperature = 100,
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite.png",
         icon_size = 64,
         pressure_to_speed_ratio = 0.4,
         flow_to_energy_ratio = 0.59,
@@ -275,7 +275,7 @@ data:extend(
         { -- PROCESSING OF FLUORISATION OF URANIUM TETRAFLUORITE
         type = "recipe",
         name = "dtk-uranium-hexafluorite-recipe",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite.png",
         icon_size = 64,
         category = "chemistry",
         enabled = false,
@@ -302,7 +302,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-depleted.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-depleted.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -316,7 +316,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-1.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-1.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -330,7 +330,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-2.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-2.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -344,7 +344,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-3.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-3.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -358,7 +358,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-4.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-4.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -372,7 +372,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-5.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -386,7 +386,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-10.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-10.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -400,7 +400,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-25.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-25.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -414,7 +414,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-50.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-50.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -428,13 +428,13 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-75.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-75.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
             order = "u[uranium-fluids]-b[fluorhydric-acid-75]"
         },
-        { --uranium hexafluorite 25% Grade
+        { --uranium hexafluorite 100% Grade
             type = "fluid",
             name = "dtk-uranium-hexafluorite-100",
             default_temperature = 25,
@@ -442,7 +442,7 @@ data:extend(
             base_color = {r=0.204, g=0.204, b=0.00},
             flow_color = {r=0.204, g=0.204, b=0.00},
             max_temperature = 100,
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-100.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-100.png",
             icon_size = 64,
             pressure_to_speed_ratio = 0.4,
             flow_to_energy_ratio = 0.59,
@@ -452,7 +452,7 @@ data:extend(
         { -- Geseous diffusion
         type = "recipe",
         name = "dtk-geseous-diffusion",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-5.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -473,7 +473,7 @@ data:extend(
         { -- 1% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-1",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-1.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-1.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -494,7 +494,7 @@ data:extend(
         { -- 2% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-2",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-2.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-2.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -516,7 +516,7 @@ data:extend(
         { -- 3% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-3",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-3.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-3.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -539,7 +539,7 @@ data:extend(
         { -- 4% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-4",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-4.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-4.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -560,7 +560,7 @@ data:extend(
         { -- 5% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-5",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-5.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -581,7 +581,7 @@ data:extend(
         { -- 10% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-10",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-10.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-10.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -601,7 +601,7 @@ data:extend(
         { -- 25% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-25",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-25.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-25.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -621,7 +621,7 @@ data:extend(
         { -- 50% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-50",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-50.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-50.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -641,7 +641,7 @@ data:extend(
         { -- 75% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-75",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-75.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-75.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -661,7 +661,7 @@ data:extend(
         { -- 100% CENTRIFUGING
         type = "recipe",
         name = "dtk-uranium-centrifuging-100",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-hexafluorite-100.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-hexafluorite-100.png",
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
@@ -687,7 +687,7 @@ data:extend(
         base_color = {r=0.204, g=0.204, b=0.00},
         flow_color = {r=0.204, g=0.204, b=0.00},
         max_temperature = 100,
-        icon = "__NuclearShmidtk__/graphics/resources/uo2f2-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2f2-5.png",
         icon_size = 64,
         pressure_to_speed_ratio = 0.4,
         flow_to_energy_ratio = 0.59,
@@ -696,7 +696,7 @@ data:extend(
         { -- 5% grade Uranium FLUORIDE UO2F2 recipe (back to uo2)
         type = "recipe",
         name = "dtk-uo2f2-5",
-        icon = "__NuclearShmidtk__/graphics/resources/uo2f2-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2f2-5.png",
         icon_size = 64,
         category = "chemistry",
         enabled = false,
@@ -718,7 +718,7 @@ data:extend(
         { -- Uranium plutunium solution
             type = "fluid",
             name = "dtk-uranium-plutonium-solution-96-1",
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-plutonium-solution.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "h[uranium-plutonium-solution]",
@@ -733,7 +733,7 @@ data:extend(
         { -- Plutonium solution
             type = "fluid",
             name = "dtk-plutonium-solution",
-            icon = "__NuclearShmidtk__/graphics/resources/pu-solution.png",
+            icon = "__RealisticUranium__/graphics/resources/pu-solution.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "h[plutonium-solution]",
@@ -748,7 +748,7 @@ data:extend(
         { -- high-radiactive-waste
             type = "fluid",
             name = "dtk-high-radiactive-waste",
-            icon = "__NuclearShmidtk__/graphics/resources/high-radioctive-waste.png",
+            icon = "__RealisticUranium__/graphics/resources/high-radioctive-waste.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "h[high-radioctive-waste]",
@@ -764,7 +764,7 @@ data:extend(
         { -- PUREX Process
             type = "recipe",
             name = "dtk-purex-1",
-            icon = "__NuclearShmidtk__/graphics/resources/purex.png",
+            icon = "__RealisticUranium__/graphics/resources/purex.png",
             icon_size = 32,
             category = "uranium-processing",
             enabled = false,
@@ -789,7 +789,7 @@ data:extend(
         { -- MOX used fuel solution
             type = "fluid",
             name = "dtk-uranium-plutonium-solution-88-5",
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-plutonium-solution.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-plutonium-solution.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "h[uranium-plutonium-solution]",
@@ -805,7 +805,7 @@ data:extend(
         { -- PUREX Process of MOX FUEL
             type = "recipe",
             name = "dtk-purex-2",
-            icon = "__NuclearShmidtk__/graphics/resources/purex.png",
+            icon = "__RealisticUranium__/graphics/resources/purex.png",
             icon_size = 32,
             category = "uranium-processing",
             enabled = false,

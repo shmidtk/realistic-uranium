@@ -1,7 +1,7 @@
 --{ -- Mining resources
 --   type = "item",
 --    name = "dtk-uranium-powder",
---    icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-64.png",
+--    icon = "__RealisticUranium__/graphics/resources/uranium-powder-64.png",
 --    icon_size = 64,
 --    subgroup = "intermediate-product",
 --    order = "g[dtk-uranium-powder]",
@@ -17,7 +17,7 @@
   --Uranium salt
   local dtk_uranium_salt = table.deepcopy(standard_item)
       dtk_uranium_salt.name = 'dtk-uranium-salt'
-      dtk_uranium_salt.icon = "__NuclearShmidtk__/graphics/resources/uranium-salt.png"
+      dtk_uranium_salt.icon = "__RealisticUranium__/graphics/resources/uranium-salt.png"
       dtk_uranium_salt.icon_size = 64
       dtk_uranium_salt.subgroup = "intermediate-product"
       dtk_uranium_salt.order = "u[uranium-items]-g[dtk-uranium-salt]"
@@ -36,7 +36,7 @@
                                                          {type="item", name="dtk-uranium-salt", amount=6},
                                                          {type="fluid", name="water", amount = 18}
                                                       }
-        dtk_uranium_salt_recipe.icon = "__NuclearShmidtk__/graphics/resources/uranium-salt.png"
+        dtk_uranium_salt_recipe.icon = "__RealisticUranium__/graphics/resources/uranium-salt.png"
         dtk_uranium_salt_recipe.icon_size = 64
         dtk_uranium_salt_recipe.subgroup = "intermediate-product"
         dtk_uranium_salt_recipe.order = "u[uranium-items]-f[dtk-uranium-salt]"
@@ -46,19 +46,19 @@
    local dtk_uranium_plant_item = table.deepcopy(data.raw['item']['oil-refinery'])
    dtk_uranium_plant_item.name = "dtk-uranium-refinery-plant"
    dtk_uranium_plant_item.place_result  = "dtk-uranium-refinery-plant"
-   dtk_uranium_plant_item.icon = "__NuclearShmidtk__/graphics/icons/uranium-refinery.png"
+   dtk_uranium_plant_item.icon = "__RealisticUranium__/graphics/icons/uranium-refinery.png"
 
 
   
-   local dtk_calcium_silicat_recipe = table.deepcopy(data.raw.recipe["stone-brick"])
-   dtk_calcium_silicat_recipe.name = "dtk-calcium-silicat-to-bricks"
-   dtk_calcium_silicat_recipe.energy_required = 12
-   dtk_calcium_silicat_recipe.enabled = false
-   dtk_calcium_silicat_recipe.ingredients = {
-                                               {type="item",  name = "dtk-calcium-silicat", amount = 1},
-                                            }
-   dtk_calcium_silicat_recipe.subgroup = "intermediate-product"
-   dtk_calcium_silicat_recipe.order = "u[uranium-items]-f[dtk-calcium-silicat]"
+  -- local dtk_calcium_silicat_recipe = table.deepcopy(data.raw.recipe["stone-brick"])
+  -- dtk_calcium_silicat_recipe.name = "dtk-calcium-silicat-to-bricks"
+  -- dtk_calcium_silicat_recipe.energy_required = 12
+  -- dtk_calcium_silicat_recipe.enabled = false
+  -- dtk_calcium_silicat_recipe.ingredients = {
+  --                                             {type="item",  name = "dtk-calcium-silicat", amount = 1},
+  --                                          }
+  -- dtk_calcium_silicat_recipe.subgroup = "intermediate-product"
+  -- dtk_calcium_silicat_recipe.order = "u[uranium-items]-f[dtk-calcium-silicat]"
 
 
 
@@ -68,14 +68,14 @@
         dtk_uranium_plant_item,
         dtk_uranium_salt,
         dtk_uranium_salt_recipe,
-        dtk_calcium_silicat_recipe,
+  --      dtk_calcium_silicat_recipe,
 
 
 
         {  --Uranium powder
             type = "item",
             name = "dtk-uranium-powder",
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-64.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-powder-64.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "u[uranium-items]-u[dtk-uranium-powder]",
@@ -85,7 +85,7 @@
             type = "recipe",
             name = "dtk-uranium-powder-proc",
             category = "crushing",
-            energy_required = 12,
+            energy_required = 6,
             enabled = false,
             ingredients = {
                             {type = "item", name = "uranium-ore", amount = 10}
@@ -93,7 +93,7 @@
             results = {
                             {type="item", name="dtk-uranium-powder", amount= 10},
                         },
-            icon = "__NuclearShmidtk__/graphics/resources/uranium-powder-64.png",
+            icon = "__RealisticUranium__/graphics/resources/uranium-powder-64.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "u[uranium-items]-f[dtk-uranium-powder]"
@@ -102,7 +102,7 @@
         { --  Yellow cake
             type = "item",
             name = "dtk-yellow-cake",
-            icon = "__NuclearShmidtk__/graphics/resources/yellow-cake.png",
+            icon = "__RealisticUranium__/graphics/resources/yellow-cake.png",
             icon_size = 64,
             subgroup = "intermediate-product",
             order = "u[uranium-items]-f[dtk-yellow-cake]",
@@ -120,9 +120,9 @@
                     },
         results = {
                         {type="item", name="dtk-yellow-cake", amount=5},
-                        {type="item", name="thorium-ore", amount=1},
+                    --    {type="item", name="thorium-ore", amount=1},
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/yellow-cake.png",
+        icon = "__RealisticUranium__/graphics/resources/yellow-cake.png",
         icon_size = 64,
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[dtk-yellow-cake]"
@@ -131,7 +131,7 @@
         { -- UNH
         type = "item",
         name = "dtk-unh",
-        icon = "__NuclearShmidtk__/graphics/resources/unh.png",
+        icon = "__RealisticUranium__/graphics/resources/unh.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-f[unh]",
@@ -152,7 +152,7 @@
                         {type="fluid", name="steam", amount= 300, temperature = 150}
                 },
         emissions_multiplier = 2,
-        icon = "__NuclearShmidtk__/graphics/resources/unh.png",
+        icon = "__RealisticUranium__/graphics/resources/unh.png",
         icon_size = 64,
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[unh]"
@@ -162,7 +162,7 @@
         { --  Uranium trioxide
         type = "item",
         name = "dtk-uo3",
-        icon = "__NuclearShmidtk__/graphics/resources/uo3.png",
+        icon = "__RealisticUranium__/graphics/resources/uo3.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-f[dtk-uo3]",
@@ -182,7 +182,7 @@
                         {type="item", name="dtk-uo3", amount=1},
                       
                     },
-        icon = "__NuclearShmidtk__/graphics/recipes/uo3-recipe.png",
+        icon = "__RealisticUranium__/graphics/recipes/uo3-recipe.png",
         icon_size = 64,
         order = "u[uranium-items]-f[uo3-recipe]"
         },
@@ -190,7 +190,7 @@
         { --  Uranium dioxide
         type = "item",
         name = "dtk-uo2",
-        icon = "__NuclearShmidtk__/graphics/resources/uo2.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-f[dtk-uo2]",
@@ -211,7 +211,7 @@
                         {type="item", name="dtk-uo2", amount=5},
                         {type="fluid", name="water", amount=500},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/uo2.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[uo2]"
@@ -221,7 +221,7 @@
         { -- FLUORITE
         type = "item",
         name = "dtk-fluorite",
-        icon = "__NuclearShmidtk__/graphics/icons/fluorite.png",
+        icon = "__RealisticUranium__/graphics/icons/fluorite.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[fluorite]",
@@ -233,27 +233,27 @@
         { -- CALSIUM SULFAT CaSO4
         type = "item",
         name = "dtk-calcium-sulfate",
-        icon = "__NuclearShmidtk__/graphics/resources/calcium-sulfat.png",
+        icon = "__RealisticUranium__/graphics/resources/calcium-sulfat.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "h[fluorite]",
         stack_size = 100
         },
 
-        { -- CALSIUM SILICAT CaSiO3
+    --[[    { -- CALSIUM SILICAT CaSiO3
         type = "item",
         name = "dtk-calcium-silicat",
-        icon = "__NuclearShmidtk__/graphics/resources/calcium-silicat.png",
+        icon = "__RealisticUranium__/graphics/resources/calcium-silicat.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[fluorite]",
         stack_size = 100
-        },
+        },]]--
 
         { -- Uranium Tetrafluorite UF4
         type = "item",
         name = "dtk-uranium-tetrafluorite",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-tetrafluorite.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-tetrafluorite.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[uranium-tetrafluorite]",
@@ -275,7 +275,7 @@
                         {type="item", name="dtk-uranium-tetrafluorite", amount=1},
                         {type="fluid", name="steam", amount=500, temperature = 150},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/recipes/uranium-tetrafluorite.png",
+        icon = "__RealisticUranium__/graphics/recipes/uranium-tetrafluorite.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[uranium-tetrafluorite]"
@@ -284,7 +284,7 @@
         { -- 5% grade Ammonium diuranate ADU 
         type = "item",
         name = "dtk-adu-5",
-        icon = "__NuclearShmidtk__/graphics/resources/adu-5.png",
+        icon = "__RealisticUranium__/graphics/resources/adu-5.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[ammonium-diuranate]",
@@ -306,7 +306,7 @@
                         {type="item", name="dtk-adu-5", amount=1},
                         {type="fluid", name="water", amount=95},                      
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/adu-5.png",
+        icon = "__RealisticUranium__/graphics/resources/adu-5.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[ammonium-diuranate]"
@@ -315,7 +315,7 @@
         { -- 5% grade Uranium dioxide
         type = "item",
         name = "dtk-uo2-5",
-        icon = "__NuclearShmidtk__/graphics/resources/uo2-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2-5.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "h[ammonium-diuranate]",
@@ -335,7 +335,7 @@
         results = {
                         {type="item", name="dtk-uo2-5", amount=1}                      
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/uo2-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uo2-5.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[ammonium-diuranate]"
@@ -344,7 +344,7 @@
         { -- Empty Fuel Cell
         type = "item",
         name = "dtk-empty-fuel-cell",
-        icon = "__NuclearShmidtk__/graphics/resources/empty-fuel-cell.png",
+        icon = "__RealisticUranium__/graphics/resources/empty-fuel-cell.png",
         icon_size = 32,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[empty-fuel-cell]",
@@ -363,7 +363,7 @@
         results = {
                         {type="item", name="dtk-empty-fuel-cell", amount=10}                      
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/empty-fuel-cell.png",
+        icon = "__RealisticUranium__/graphics/resources/empty-fuel-cell.png",
         icon_size = 32,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[empty-fuel-cell]"
@@ -372,7 +372,7 @@
         { -- Uranium pallets
         type = "item",
         name = "dtk-uranium-pallets-5",
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-pallets-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-pallets-5.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[uranium-pallets-5]",
@@ -391,7 +391,7 @@
         results = {
                         {type="item", name="dtk-uranium-pallets-5", amount=1}                      
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/uranium-pallets-5.png",
+        icon = "__RealisticUranium__/graphics/resources/uranium-pallets-5.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[uranium-pallets-5]"
@@ -402,7 +402,7 @@
         { -- Uranium Tetrafluorite UF4
         type = "item",
         name = "dtk-uranium-tetrafluorite-depleted",
-        icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+        icon = "__RealisticUranium__/graphics/resources/uf-4-depleted.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[dtk-uranium-tetrafluorite-depleted]",
@@ -425,7 +425,7 @@
                         {type="fluid", name="dtk-fluorhydric-acid", amount=200},
                         {type="fluid", name="chlorine", amount=190}                           
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/uf-4-depleted.png",
+        icon = "__RealisticUranium__/graphics/resources/uf-4-depleted.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[uf-4-depleted]"
@@ -457,7 +457,7 @@
         { --   Uranium Tetrafluorite UF4 100% Grade
         type = "item",
         name = "dtk-uranium-tetrafluorite-100",
-        icon = "__NuclearShmidtk__/graphics/resources/uf-4-100.png",
+        icon = "__RealisticUranium__/graphics/resources/uf-4-100.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[dtk-uranium-tetrafluorite-depleted]",
@@ -480,7 +480,7 @@
                         {type="fluid", name="dtk-fluorhydric-acid", amount=200},
                         {type="fluid", name="chlorine", amount=190}                           
                     },
-        icon = "__NuclearShmidtk__/graphics/resources/uf-4-100.png",
+        icon = "__RealisticUranium__/graphics/resources/uf-4-100.png",
         icon_size = 64,
         subgroup = 'intermediate-product',
         order = "u[uranium-items]-f[uf-4-100]"
@@ -511,7 +511,7 @@
         { -- Low radiactive waste
         type = "item",
         name = "dtk-low-radioactive-waste",
-        icon = "__NuclearShmidtk__/graphics/resources/radioactive-waste.png",
+        icon = "__RealisticUranium__/graphics/resources/radioactive-waste.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[dtk-low-radioactive-waste]",
@@ -520,7 +520,7 @@
         { -- Plutonium
         type = "item",
         name = "dtk-plutonium",
-        icon = "__NuclearShmidtk__/graphics/resources/plutonium.png",
+        icon = "__RealisticUranium__/graphics/resources/plutonium.png",
         icon_size = 32,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[plutonium]",
@@ -530,7 +530,7 @@
         { -- Plutonium extraction
         type = "recipe",
         name = "dtk-plutonium-extraction",
-        icon = "__NuclearShmidtk__/graphics/resources/plutonium.png",
+        icon = "__RealisticUranium__/graphics/resources/plutonium.png",
         icon_size = 32,
         category = "uranium-processing",
         enabled = false,
@@ -552,7 +552,7 @@
         { -- MOX fuel pellets
         type = "item",
         name = "dtk-mox-fuel-pellet",
-        icon = "__NuclearShmidtk__/graphics/resources/mox-pellets.png",
+        icon = "__RealisticUranium__/graphics/resources/mox-pellets.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "h[plutonium]",
@@ -561,8 +561,8 @@
 
         { -- MOX fuel pellets recipe
         type = "recipe",
-        name = "dtk-mox-fuel-pellet",
-        icon = "__NuclearShmidtk__/graphics/resources/mox-pellets.png",
+        name = "dtk-mox-fuel-pellet-recipe",
+        icon = "__RealisticUranium__/graphics/resources/mox-pellets.png",
         icon_size = 64,
         category = "smelting",
         enabled = false,
@@ -583,7 +583,7 @@
         { -- MOX  fuel-cell
         type = "item",
         name = "dtk-mox-fuel-cell",
-        icon = "__NuclearShmidtk__/graphics/resources/mox-fuel-cell.png",
+        icon = "__RealisticUranium__/graphics/resources/mox-fuel-cell.png",
         icon_size = 32,
         subgroup = "intermediate-product",
         order = "h[mox-fuel-cell]",
@@ -596,7 +596,7 @@
         { -- MOX used up fuel-cell
         type = "item",
         name = "dtk-used-up-mox-fuel-cell",
-        icon = "__NuclearShmidtk__/graphics/resources/used-up-mox-fuel-cell.png",
+        icon = "__RealisticUranium__/graphics/resources/used-up-mox-fuel-cell.png",
         icon_size = 32,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[up-mox-fuel-cell]",
@@ -606,7 +606,7 @@
         { --  MOX  fuel-cell recipe 
         type = "recipe",
         name = "dtk-mox-fuel-cell",
-        icon = "__NuclearShmidtk__/graphics/resources/mox-fuel-cell.png",
+        icon = "__RealisticUranium__/graphics/resources/mox-fuel-cell.png",
         icon_size = 32,
         category = "crafting",
         enabled = false,
@@ -627,7 +627,7 @@
         { --  MOX Used mox fuel cell processing
             type = "recipe",
             name = "dtk-used-up-mox-fuel-cell-processing",
-            icon = "__NuclearShmidtk__/graphics/resources/used-up-mox-fuel-cell.png",
+            icon = "__RealisticUranium__/graphics/resources/used-up-mox-fuel-cell.png",
             icon_size = 32,
             category = "centrifuging",
             enabled = false,

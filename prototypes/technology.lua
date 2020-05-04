@@ -4,7 +4,7 @@ data:extend(
         -- enables advanced 
         type = "technology",
         name = "dtk-uranium-centrifuging-tech",
-        icon = "__NuclearShmidtk__/graphics/technology/centrifuging.png",
+        icon = "__RealisticUranium__/graphics/technology/centrifuging.png",
         icon_size = 128,
         effects =
         {
@@ -50,13 +50,13 @@ data:extend(
         -- enables plutonium fuel reprocessing
         type = "technology",
         name = "dtk-plutonium-fuel-reprocessing",
-        icon = "__NuclearShmidtk__/graphics/technology/plutonium-fuel-reprocessing.png",
+        icon = "__RealisticUranium__/graphics/technology/plutonium-fuel-reprocessing.png",
         icon_size = 128,
         effects =
         {
             {
                 type = "unlock-recipe",
-                recipe = "dtk-mox-fuel-pellet"
+                recipe = "dtk-mox-fuel-pellet-recipe"
             },
             {
                 type = "unlock-recipe",

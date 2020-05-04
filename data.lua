@@ -1,4 +1,4 @@
-require("prototypes.items")
+--require("prototypes.items")
 require("prototypes.items-unit")
 require("prototypes.recipe")
 require("prototypes.technology")
@@ -29,7 +29,7 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-sulfur-trioxide-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-sulfuric-acid-from-trioxide"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uo2-recipe"})
-table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-calcium-silicat-to-bricks"})
+--table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-calcium-silicat-to-bricks"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-tetrafluorite-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-fluorum-recipe"})
 table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-hexafluorite-recipe"})
@@ -44,14 +44,6 @@ table.insert(data.raw["technology"]["uranium-processing"].effects, {type = "unlo
 
 
 data:extend({
-    {
-        type = "fuel-category",
-        name = "thorium-fuel"
-    },
-    {
-        type = "recipe-category",
-        name = "nwaste"
-	},
 	{
 		type = "recipe-category",
 		name = "uranium-processing"
@@ -59,12 +51,6 @@ data:extend({
 })
 
 -- CHANGING RECIPES
-
--- SETTINGS
-if settings.startup["disable-kovarex-enrichment-process"].value then
-	data.raw.recipe["kovarex-enrichment-process"].hidden = true
-end
-
 
 -- CHANGES TO VANILA URANIUM MINING
 
@@ -102,12 +88,9 @@ data.raw["assembling-machine"]["centrifuge"].fluid_boxes =	{
 																},
 																off_when_no_fluid_recipe = true
 															}
-
-
+data.raw["assembling-machine"]["centrifuge"].energy_usage = "800kW"
 
 table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-plutonium-extraction"})
 table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-purex-1"})
 
 
-data.raw.recipe["kovarex-enrichment-process"].hidden = true
-data.raw.recipe["uranium-processing"].hidden = true

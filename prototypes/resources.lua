@@ -1,4 +1,4 @@
-thorium_autoplace_settings = {
+--[[thorium_autoplace_settings = {
   name = "thorium-ore",
   order = "b",
   base_density = 2,
@@ -9,7 +9,7 @@ thorium_autoplace_settings = {
   regular_blob_amplitude_multiplier = 1.25,
   richness_post_multiplier = 0.75,
   resource_index = 51,
-  regular_rq_factor_multiplier = 0.9}
+  regular_rq_factor_multiplier = 0.9}]]--
 
 
   thorium_autoplace_settings = { --Fluorite
@@ -28,7 +28,7 @@ thorium_autoplace_settings = {
 
 data:extend(
 {
-    {
+--[[{
       type = "autoplace-control",
       name = "thorium-ore",
       richness = true,
@@ -42,7 +42,7 @@ data:extend(
     {
       type = "resource",
       name = "thorium-ore",
-      icon = "__NuclearShmidtk__/graphics/icons/thorium-ore.png",
+      icon = "__RealisticUranium__/graphics/icons/thorium-ore.png",
       icon_size = 64,
       flags = {"placeable-neutral"},
       order="a-b-a",
@@ -64,7 +64,7 @@ data:extend(
         {
           sheet =
           {
-            filename = "__NuclearShmidtk__/graphics/resources/thorium-ore.png",
+            filename = "__RealisticUranium__/graphics/resources/thorium-ore.png",
             priority = "extra-high",
             width = 64,
             height = 64,
@@ -72,7 +72,7 @@ data:extend(
             variation_count = 8,
             hr_version =
               {
-                filename = "__NuclearShmidtk__/graphics/resources/hr-thorium-ore.png",
+                filename = "__RealisticUranium__/graphics/resources/hr-thorium-ore.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
@@ -82,7 +82,7 @@ data:extend(
               }
           }
         },
-    },
+    },--]]
 
 
     { --Fluorite
@@ -99,7 +99,7 @@ data:extend(
     {
       type = "resource",
       name = "fluorite-ore",
-      icon = "__NuclearShmidtk__/graphics/icons/fluorite.png",
+      icon = "__RealisticUranium__/graphics/icons/fluorite.png",
       icon_size = 64,
       flags = {"placeable-neutral"},
       order="a-b-a",
@@ -119,7 +119,7 @@ data:extend(
         {
           sheet =
           {
-            filename = "__NuclearShmidtk__/graphics/resources/fluorite.png",
+            filename = "__RealisticUranium__/graphics/resources/fluorite.png",
             priority = "extra-high",
             width = 64,
             height = 64,
@@ -127,7 +127,7 @@ data:extend(
             variation_count = 8,
             hr_version =
               {
-                filename = "__NuclearShmidtk__/graphics/resources/hr-fluorite.png",
+                filename = "__RealisticUranium__/graphics/resources/hr-fluorite.png",
                 priority = "extra-high",
                 width = 128,
                 height = 128,
