@@ -85,7 +85,7 @@
             type = "recipe",
             name = "dtk-uranium-powder-proc",
             category = "crushing",
-            energy_required = 6,
+            energy_required = 4,
             enabled = false,
             ingredients = {
                             {type = "item", name = "uranium-ore", amount = 10}
@@ -142,7 +142,7 @@
         type = "recipe",
         name = "dtk-unh-recipe",
         category = "chemistry",
-        energy_required = 12,
+        energy_required = 120,
         enabled = false,
         ingredients = {
                         {type="fluid", name = "dtk-ok-liquoir", amount = 100},
@@ -265,7 +265,7 @@
         type = "recipe",
         name = "dtk-uranium-tetrafluorite-recipe",
         category = "chemistry",
-        energy_required = 12,
+        energy_required = 180,
         enabled = false,
         ingredients = {
                         {type="item",  name = "dtk-uo2", amount = 1},
@@ -589,7 +589,7 @@
         order = "h[mox-fuel-cell]",
         fuel_category = "nuclear",
         burnt_result = "dtk-used-up-mox-fuel-cell",
-        fuel_value = "8GJ",
+        fuel_value = "10GJ",
         stack_size = 50
         },
 

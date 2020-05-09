@@ -1,7 +1,7 @@
 -- CHANGE TO URANIUM FUEL CELL
 --data.raw["solar-panel"]["solar-panel"].production = "25kW"
 --data.raw["reactor"]["nuclear-reactor"].consumption = "45MW"
---data.raw.item["uranium-fuel-cell"].fuel_value = "8GJ" 
+data.raw.item["uranium-fuel-cell"].fuel_value = "10GJ" 
 
 
 

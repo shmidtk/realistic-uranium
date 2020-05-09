@@ -88,7 +88,7 @@ data.raw["assembling-machine"]["centrifuge"].fluid_boxes =	{
 																},
 																off_when_no_fluid_recipe = true
 															}
-data.raw["assembling-machine"]["centrifuge"].energy_usage = "800kW"
+data.raw["assembling-machine"]["centrifuge"].energy_usage = "1200kW"
 
 table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-plutonium-extraction"})
 table.insert(data.raw["technology"]["nuclear-fuel-reprocessing"].effects, {type = "unlock-recipe", recipe = "dtk-purex-1"})
