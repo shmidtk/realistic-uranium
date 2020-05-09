@@ -25,7 +25,7 @@ data.raw["recipe"]["nuclear-fuel-reprocessing"].results  =
 							{type="item",  name = "dtk-low-radioactive-waste", amount = 6},
 							{type="item",  name = "steel-plate", amount = 5},
 							{type="item",  name = "rare-metals", amount = 1},
-							{type="item",  name = "tritium", probability = 0.15, amount = 1}
+							{type="item",  name = "tritium", probability = 0.03, amount = 1}
 						}
 
 data.raw["recipe"]["nuclear-fuel-reprocessing"].main_product = ""
