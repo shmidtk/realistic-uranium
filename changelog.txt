@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 11. 05. 2020
+  Bug fixes:
+    - Centrifuges behavior with liquids
+    - Uranium plant picked up as oil refinery
+    - Load of mod in resolution sprites 
+  Rebalancing  
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 10. 05. 2020
   Bug fixes:
