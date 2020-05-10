@@ -1,12 +1,3 @@
---{ -- Mining resources
---   type = "item",
---    name = "dtk-uranium-powder",
---    icon = "__RealisticUranium__/graphics/resources/uranium-powder-64.png",
---    icon_size = 64,
---    subgroup = "intermediate-product",
---    order = "g[dtk-uranium-powder]",
---    stack_size = 100
---  },
 
   local standard_item = data.raw.item["iron-stick"]
   local assembler_recipe = data.raw.recipe["iron-stick"]
@@ -49,28 +40,11 @@
    dtk_uranium_plant_item.icon = "__RealisticUranium__/graphics/icons/uranium-refinery.png"
 
 
-  
-  -- local dtk_calcium_silicat_recipe = table.deepcopy(data.raw.recipe["stone-brick"])
-  -- dtk_calcium_silicat_recipe.name = "dtk-calcium-silicat-to-bricks"
-  -- dtk_calcium_silicat_recipe.energy_required = 12
-  -- dtk_calcium_silicat_recipe.enabled = false
-  -- dtk_calcium_silicat_recipe.ingredients = {
-  --                                             {type="item",  name = "dtk-calcium-silicat", amount = 1},
-  --                                          }
-  -- dtk_calcium_silicat_recipe.subgroup = "intermediate-product"
-  -- dtk_calcium_silicat_recipe.order = "u[uranium-items]-f[dtk-calcium-silicat]"
-
-
-
-
   data:extend(
     {
         dtk_uranium_plant_item,
         dtk_uranium_salt,
         dtk_uranium_salt_recipe,
-  --      dtk_calcium_silicat_recipe,
-
-
 
         {  --Uranium powder
             type = "item",
@@ -194,7 +168,7 @@
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-f[dtk-uo2]",
-        stack_size = 10
+        stack_size = 100
        },
 
         {  --Transformation UO3 into UO2
@@ -265,7 +239,7 @@
         type = "recipe",
         name = "dtk-uranium-tetrafluorite-recipe",
         category = "chemistry",
-        energy_required = 180,
+        energy_required = 120,
         enabled = false,
         ingredients = {
                         {type="item",  name = "dtk-uo2", amount = 1},
@@ -590,7 +564,7 @@
         fuel_category = "nuclear",
         burnt_result = "dtk-used-up-mox-fuel-cell",
         fuel_value = "10GJ",
-        stack_size = 50
+        stack_size = 10
         },
 
         { -- MOX used up fuel-cell
@@ -600,7 +574,7 @@
         icon_size = 32,
         subgroup = "intermediate-product",
         order = "u[uranium-items]-h[up-mox-fuel-cell]",
-        stack_size = 50
+        stack_size = 10
         },
 
         { --  MOX  fuel-cell recipe 
