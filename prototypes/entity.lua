@@ -86,7 +86,7 @@ dtk_uranium_plant.animation = make_4way_animation_from_spritesheet(
               }
             })                                
 dtk_uranium_plant.order = "f[nuclear-energy]-a[dtk-uranium-refinery-plant]"
---dtk_uranium_plant.minable = {mining_time = 0.1, result = "dtk-uranium-refinery-plant"}
+dtk_uranium_plant.minable = {mining_time = 0.1, result = "dtk-uranium-refinery-plant"}
 dtk_uranium_plant.crafting_categories = {"uranium-processing"}
 dtk_uranium_plant.icon =  "__RealisticUranium__/graphics/icons/uranium-refinery.png"
 

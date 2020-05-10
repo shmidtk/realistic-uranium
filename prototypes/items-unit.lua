@@ -396,7 +396,7 @@
                     },
         results = {
                         {type="item", name="dtk-uranium-tetrafluorite-depleted", amount=1},
-                        {type="fluid", name="dtk-fluorhydric-acid", amount=200},
+                        {type="fluid", name="dtk-fluorhydric-acid", amount=190},
                         {type="fluid", name="chlorine", amount=190}                           
                     },
         icon = "__RealisticUranium__/graphics/resources/uf-4-depleted.png",
