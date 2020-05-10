@@ -203,7 +203,7 @@ data:extend(
             },
         results = 
             {
-                {type="fluid", name="dtk-sulfur-trioxide", amount=100},
+                {type="fluid", name="dtk-sulfur-trioxide", amount=80},
                 {type="item", name='sand', amount=1}
             },
         subgroup = "fluid-recipes",
@@ -477,7 +477,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite", amount=100}
@@ -498,7 +498,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-1", amount=100}
@@ -520,7 +520,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-2", amount=100}
@@ -543,7 +543,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-3", amount=100}
@@ -564,7 +564,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-4", amount=100}
@@ -585,7 +585,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-5", amount=100}
@@ -605,7 +605,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-10", amount=100}
@@ -625,7 +625,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-25", amount=100}
@@ -645,7 +645,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-50", amount=100}
@@ -653,7 +653,7 @@ data:extend(
         results = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=34},
-                {type="fluid", name="dtk-uranium-hexafluorite-10", amount=66}
+                {type="fluid", name="dtk-uranium-hexafluorite-75", amount=66}
             },
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[uranium-centrifuging-75]"
@@ -665,7 +665,7 @@ data:extend(
         icon_size = 64,
         category = "centrifuging",
         enabled = false,
-        energy_required = 6,
+        energy_required = 10,
         ingredients = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-75", amount=100}
@@ -673,7 +673,7 @@ data:extend(
         results = 
             {
                 {type="fluid", name="dtk-uranium-hexafluorite-depleted", amount=25},
-                {type="fluid", name="dtk-uranium-hexafluorite-10", amount=75}
+                {type="fluid", name="dtk-uranium-hexafluorite-100", amount=75}
             },
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[uranium-centrifuging-100]"

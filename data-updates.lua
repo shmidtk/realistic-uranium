@@ -43,5 +43,7 @@ table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe"
 table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-centrifuging-50"})
 table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-centrifuging-75"})
 table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-centrifuging-100"})
+table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "dtk-uranium-tetrafluorite-100"})
+table.insert(data.raw.technology["atomic-bomb"].effects, {type = "unlock-recipe", recipe = "dtk-u-235"})
 
 

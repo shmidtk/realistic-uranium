@@ -9,28 +9,7 @@ dtk_uranium_plant_recipe.result_count = 1
 
 
 data:extend(
-{--URANIUM PROCESSING
-
---    {  --URANIUM SLURRY
---        type = "recipe",
---        name = "uranium-slurry-preparation",
---        category = "chemistry",
---        energy_required = 12, --fix
- --       enabled = false,
---        ingredients = {
---                        {type="item",  name = "uranium-powder", amount = 25},
---                        {type="fluid", name = "water",          amount = 75},
---                      },
---        results = {
---                    {type="fluid", name="dtk-uranium-slurry", amount=100},
---                  },
---        main_product= "",
---        icon_mipmaps = 4,
---      icon = "__RealisticUranium__/graphics/icons/uranium-slurry.png",
- --       icon_size = 32,
- --       subgroup = "fluid-recipes",
- --       order = "a[fluid-chemistry]-f[uranium-slurry]"
- --   },
+{
     dtk_uranium_plant_recipe,
     {  --URANIUM SALT SOLUTION EXTRACTION
     type = "recipe",

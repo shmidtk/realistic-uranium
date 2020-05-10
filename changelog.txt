@@ -4,6 +4,7 @@ Date: 10. 05. 2020
   Bug fixes:
     - Locale issues
     - Fluorite ore generation
+    - Issue with unobtainability of U-235
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 9. 05. 2020
