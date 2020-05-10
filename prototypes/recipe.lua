@@ -44,7 +44,6 @@ data:extend(
     results = {
                     {type="fluid", name="dtk-uranium-salt-solution", amount=24},
                     {type="fluid", name="dtk-stone-slurry", amount= 3985},
-                --    {type="fluid", name="dtk-hydrogen", amount= 14}
                    {type="fluid", name="hydrogen", amount= 14}  --Krastorio Hydrogen
  
                 },
@@ -58,14 +57,14 @@ data:extend(
     type = "recipe",
     name = "dtk-dirty-water-treatment",
     category = "uranium-processing",
-    energy_required = 12,
+    energy_required = 4,
     enabled = false,
     ingredients = {
-                    {type="fluid",  name = "dtk-stone-slurry", amount = 100}
+                    {type="fluid",  name = "dtk-stone-slurry", amount = 200}
                 },
     results = {
-                    {type="fluid", name="water", amount = 75},
-                    {type="item", name="stone", amount= 24} 
+                    {type="fluid", name="water", amount = 150},
+                    {type="item", name="stone", amount= 48} 
                 },
     icon = "__RealisticUranium__/graphics/recipes/water-treatment.png",
     icon_size = 64,

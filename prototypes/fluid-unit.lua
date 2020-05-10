@@ -61,7 +61,7 @@ data:extend(
             type = "recipe",
             name = "dtk-uranium-slurry-preparation",
             category = "chemistry",
-            energy_required = 12,
+            energy_required = 4,
             enabled = false,
             ingredients = {
                             {type="item",  name = "dtk-uranium-powder", amount = 25},
