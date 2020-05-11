@@ -4,7 +4,7 @@ Date: 11. 05. 2020
   Bug fixes:
     - Centrifuges behavior with liquids
     - Uranium plant picked up as oil refinery
-    - Load of mod in resolution sprites 
+    - Load of mod in low resolution sprites 
   Rebalancing  
 
 ---------------------------------------------------------------------------------------------------
