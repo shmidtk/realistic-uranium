@@ -90,7 +90,7 @@
         enabled = false,
         ingredients = {
                         {type="item",  name = "dtk-uranium-salt", amount = 6},
-                        {type="fluid",  name = "ammonia", amount = 25},
+                        {type="fluid",  name = "dtk-ammonia", amount = 25},
                     },
         results = {
                         {type="item", name="dtk-yellow-cake", amount=5},
@@ -179,7 +179,7 @@
         enabled = false,
         ingredients = {
                         {type="item",  name = "dtk-uo3", amount = 5},
-                        {type="fluid",  name = "hydrogen", amount = 500},
+                        {type="fluid",  name = "dtk-hydrogen", amount = 500},
                     },
         results = {
                         {type="item", name="dtk-uo2", amount=5},
@@ -273,7 +273,7 @@
         enabled = false,
         ingredients = {
                         {type="fluid",  name = "dtk-uo2f2-5", amount = 100},
-                        {type="fluid",  name = "nitric-acid", amount = 100},
+                        {type="fluid",  name = "dtk-nitric-acid", amount = 100},
                         {type="fluid",  name = "water", amount = 100}
                     },
         results = {
@@ -304,7 +304,7 @@
         enabled = false,
         ingredients = {
                         {type="item",  name = "dtk-adu-5", amount = 1},
-                        {type="fluid",  name = "hydrogen", amount = 100}
+                        {type="fluid",  name = "dtk-hydrogen", amount = 100}
                     },
         results = {
                         {type="item", name="dtk-uo2-5", amount=1}                      
@@ -332,7 +332,7 @@
         enabled = false,
         ingredients = {
                         {type="item",  name = "steel-plate", amount = 10},
-                        {type="item",  name = "rare-metals", amount = 1}
+                        {type="item",  name = "copper-plate", amount = 1}
                     },
         results = {
                         {type="item", name="dtk-empty-fuel-cell", amount=10}                      
@@ -392,7 +392,7 @@
         enabled = false,
         ingredients = {
                         {type="fluid",  name = "dtk-uranium-hexafluorite-depleted", amount = 100},
-                        {type="fluid",  name = "hydrogen-chloride", amount = 200},
+                        {type="fluid",  name = "dtk-hydrogen-chloride", amount = 200},
                     },
         results = {
                         {type="item", name="dtk-uranium-tetrafluorite-depleted", amount=1},
@@ -414,7 +414,7 @@
             enabled = false,
             ingredients = {
                             {type="item",  name = "dtk-uranium-tetrafluorite-depleted", amount = 1},
-                            {type="item",  name = "rare-metals", amount = 2},
+                            {type="item",  name = "copper-plate", amount = 2},
                         },
             results = {
                             {type="item", name="uranium-238", amount=10}                      
@@ -447,7 +447,7 @@
         enabled = false,
         ingredients = {
                         {type="fluid",  name = "dtk-uranium-hexafluorite-100", amount = 100},
-                        {type="fluid",  name = "hydrogen-chloride", amount = 200},
+                        {type="fluid",  name = "dtk-hydrogen-chloride", amount = 200},
                     },
         results = {
                         {type="item", name="dtk-uranium-tetrafluorite-100", amount=1},
@@ -469,7 +469,7 @@
             enabled = false,
             ingredients = {
                             {type="item",  name = "dtk-uranium-tetrafluorite-100", amount = 1},
-                            {type="item",  name = "rare-metals", amount = 2},
+                            {type="item",  name = "copper-plate", amount = 2},
                         },
             results = {
                             {type="item", name="uranium-235", amount=1}                      
@@ -609,14 +609,14 @@
             ingredients = 
                         {
                             {type="item",  name = "dtk-used-up-mox-fuel-cell", amount = 1},
-                            {type="fluid",  name = "nitric-acid", amount = 100}					
+                            {type="fluid",  name = "dtk-nitric-acid", amount = 100}					
                         },			
             results = 
                         {
                             {type="fluid", name = "dtk-uranium-plutonium-solution-88-5", amount = 100},
                             {type="item",  name = "dtk-low-radioactive-waste", amount = 6},
                             {type="item",  name = "steel-plate", amount = 5},
-                            {type="item",  name = "rare-metals", amount = 1}
+                            {type="item",  name = "copper-plate", amount = 1}
                         },
             subgroup = "fluid-recipes",
             order = "u[uranium-fluid-chemistry]-f[dtk-mox-fuel-cell]"

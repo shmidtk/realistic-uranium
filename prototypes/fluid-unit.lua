@@ -123,7 +123,7 @@ data:extend(
         enabled = false,
         ingredients = {
                         {type="item", name = "dtk-yellow-cake", amount = 1},
-                        {type="fluid", name = "nitric-acid",          amount = 200},
+                        {type="fluid", name = "dtk-nitric-acid",          amount = 200},
                         {type="fluid", name = "water",          amount = 900}
                     },
         results = {
@@ -204,7 +204,7 @@ data:extend(
         results = 
             {
                 {type="fluid", name="dtk-sulfur-trioxide", amount=80},
-                {type="item", name='sand', amount=1}
+                {type="item", name='bricks', amount=1}
             },
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[sulfur-trioxide-recipe]",
@@ -249,7 +249,7 @@ data:extend(
         results = 
             {
                 {type="fluid", name="dtk-fluorum", amount=100},
-                {type="fluid", name='hydrogen', amount=100}
+                {type="fluid", name='dtk-hydrogen', amount=100}
             },
         subgroup = "fluid-recipes",
         order = "u[uranium-fluid-chemistry]-f[fluorum]"
