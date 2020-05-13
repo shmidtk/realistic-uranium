@@ -1,4 +1,5 @@
 --require("prototypes.items")
+require("prototypes.fluid-vanila-update")
 require("prototypes.items-unit")
 require("prototypes.recipe")
 require("prototypes.technology")
