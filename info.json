@@ -1,9 +1,9 @@
 {
 	"name": "RealisticUranium",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"title": "Realistic Uranium",
 	"author": "dtk",
-	"factorio_version": "0.18",
+	"factorio_version": "1.0",
 	"description": "Adds close to reality uranium processing",
 	"dependencies": ["Krastorio2 >= 0.9.9"]
  }

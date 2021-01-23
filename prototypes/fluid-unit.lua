@@ -188,7 +188,7 @@ data:extend(
             order = "u[uranium-fluids]-b[fluorhydric-acid]"
         },
         
-        { -- PROCESSING OF CALCUIM SULFAT TO RECOVER SULUR TRIOXIDE
+        { -- PROCESSING OF CALCUIM SULFAT TO RECOVER SULFUR TRIOXIDE
         type = "recipe",
         name = "dtk-sulfur-trioxide-recipe",
         icon = "__RealisticUranium__/graphics/resources/sulfur-trioxide.png",
